@@ -20,4 +20,6 @@ Publish this repository's root to GitHub Pages. Include `index.html`, `style.css
 
 Copy a `.game-card` into the appropriate section, give its title and call to action unique IDs, update `aria-labelledby`, and set the game URL, image, description, and controls. Update the visible game count. When mobile or desktop + mobile games arrive, replace the relevant announcement with a game grid. The first desktop + mobile release is announced for October 1, 2026.
 
+Multiplayer is the first collection section, announcing a focus on card games and board games from October 1, 2026. It is an announcement only: add links to individual multiplayer games later, when the collection is ready.
+
 Cover artwork for DOCK and HAMSTER comes from their existing repositories. PARK uses an actual gameplay capture. Assets are local so the catalog deploys independently. Analytics uses the same `G-WTPHWDLQ7K` stream as the games. Author attribution links to Grzegorz Byrka on LinkedIn.
