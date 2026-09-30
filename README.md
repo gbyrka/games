@@ -14,7 +14,7 @@ Open `http://localhost:8000/games/`. Sibling links also work on GitHub Pages at 
 
 ## Publish
 
-Publish this repository's root to GitHub Pages. Include `index.html`, `privacy.html`, `config.json`, `style.css`, and `assets/`.
+Publish this repository's root to GitHub Pages. Include `index.html`, `privacy.html`, `config.json`, `style.css`, `ads.css`, `monetization.js`, and `assets/`.
 
 ## Privacy policy
 
@@ -22,11 +22,21 @@ Publish this repository's root to GitHub Pages. Include `index.html`, `privacy.h
 
 The policy page is standalone HTML with inline styles and local assets; it loads no analytics, advertising, or consent scripts. Keep it that way so visitors can read it before making a consent choice. The AdSense verification metatag does not load scripts or ads.
 
-Review this page when changing services or storage. AdSense advertising and consent integration are still separate implementation steps: the verification metatags do not implement a CMP or connect Analytics to consent choices. Confirm Analytics retention settings and the actual consent behavior before relying on the policy's consent requirements as implemented behavior.
+Review this page when changing services or storage. Confirm Analytics retention settings in the Google account when updating the policy.
+
+## Advertising and consent
+
+The catalog has one responsive `games_catalog` unit (`7475979927`) after the closing note, before the footer. Each game has one `game_footer` unit (`9380002810`) in a separate section below its game shell and controls, with at least 150px of separation. The sections use neutral `ADVERTISEMENT` labels, inherit the site's colours and do not change game viewport sizes.
+
+Each Pages project includes its own identical `monetization.js` and `ads.css` so it can deploy independently. The Google AdSense script is loaded once per document. Ad units are requested once as they approach the viewport; blocked scripts or unfilled units hide the ad section. No ads or analytics are added to the privacy page or the root redirect.
+
+In AdSense, publish the Google CMP message for `gbyrka.github.io`. In **Privacy & messaging → European regulations → Settings**, enable Consent Mode for **advertising** and **analytics**. Keep Auto ads off when using these manual placements. `monetization.js` starts with denied consent and loads Google Analytics only after Google CMP reports analytics consent as granted or not applicable. Unknown, denied or unconfigured consent does not load Analytics, and gameplay events before permission are discarded. AdSense handles its own ad consent through the CMP.
+
+Publish `ads.txt` from the separate `gbyrka.github.io` repository so it is available at `https://gbyrka.github.io/ads.txt`. Publish all six project repositories to activate their placements. Check the consent flow and responsiveness on the published site; ad availability still depends on Google's serving decisions.
 
 ## Release version and browser cache
 
-Before publishing changes to CSS or JavaScript, change `version` in `config.json`, for example from `cedar` to `birch`. This is the only place to set the release version. Use 3–16 letters/digits and a new value for every release.
+Before publishing changes to CSS or JavaScript, change `version` in `config.json`, for example from `cedar` to `birch`. Use 3–16 letters/digits and a new value for every release. If changing the standalone advertising files, also update their `?v=` URLs in `index.html` to that release version; they initialise before the application loader.
 
 The inline loader fetches the configuration with `cache: 'no-store'` and a unique query parameter on every visit, even when the HTML is cached. It then loads `style.css?v=cedar` and the favicon with the configured version. The initial stylesheet keeps the static catalog usable while the configuration loads, including with JavaScript disabled. A visible reload notice appears if the current release cannot be loaded.
 
