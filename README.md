@@ -14,7 +14,15 @@ Open `http://localhost:8000/games/`. Sibling links also work on GitHub Pages at 
 
 ## Publish
 
-Publish this repository's root to GitHub Pages. Include `index.html`, `config.json`, `style.css`, and `assets/`.
+Publish this repository's root to GitHub Pages. Include `index.html`, `privacy.html`, `config.json`, `style.css`, and `assets/`.
+
+## Privacy policy
+
+`privacy.html` covers the collection's local game saves, multiplayer room/chat data, GitHub Pages hosting, Google Analytics, and AdSense where enabled. The catalog footer links to it. After publication, use `https://gbyrka.github.io/games/privacy.html` as the privacy policy URL in AdSense.
+
+The policy page is standalone HTML with inline styles and local assets; it loads no analytics, advertising, or consent scripts. Keep it that way so visitors can read it before making a consent choice. The AdSense verification metatag does not load scripts or ads.
+
+Review this page when changing services or storage. AdSense advertising and consent integration are still separate implementation steps: the verification metatags do not implement a CMP or connect Analytics to consent choices. Confirm Analytics retention settings and the actual consent behavior before relying on the policy's consent requirements as implemented behavior.
 
 ## Release version and browser cache
 
