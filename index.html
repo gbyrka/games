@@ -2,15 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="google-adsense-account" content="ca-pub-3806610967714181">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111715">
   <meta name="description" content="Explore the MoD-IT collection of free, serverless browser games. No accounts or registration required. Small games. Big little adventures.">
   <title>MoD-IT Games — A little time. A little adventure.</title>
   <meta property="og:title" content="MoD-IT Games — A little time. A little adventure.">
-  <meta property="og:description" content="Free, serverless games by Grzegorz Byrka. Every game runs in your browser, with no accounts or registration required.">
+  <meta property="og:description" content="Free, serverless browser games by Grzegorz Byrka. Play PLAN with friends, or find a little solo adventure. No accounts or registration required.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
+  <meta property="og:url" content="https://gbyrka.github.io/games/">
+  <meta property="og:site_name" content="MoD-IT Games">
+  <meta property="og:image" content="https://gbyrka.github.io/games/assets/multiplayer-cover.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="Ivory playing cards and a small strategy board on an emerald table, introducing the multiplayer collection.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MoD-IT Games — Good games. Good company.">
+  <meta name="twitter:description" content="Free, serverless browser games. Play PLAN with friends — no registration required.">
+  <meta name="twitter:image" content="https://gbyrka.github.io/games/assets/multiplayer-cover.jpg">
+  <link rel="canonical" href="https://gbyrka.github.io/games/">
+  <link id="app-icon" rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link id="app-style" rel="stylesheet" href="./style.css">
   <!-- Shared Google Analytics stream used by all games. -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WTPHWDLQ7K"></script>
   <script>
@@ -21,6 +34,10 @@
   </script>
 </head>
 <body>
+  <aside id="asset-error" class="asset-error wrap" role="alert" hidden>
+    <span>We couldn't load the latest site files. Please check your connection and reload.</span>
+    <button id="reload-assets" type="button">RELOAD</button>
+  </aside>
   <a class="skip-link" href="#main">Skip to games</a>
   <header class="site-header wrap">
     <a class="brand" href="./" aria-label="MoD-IT Games home"><img src="assets/mod-it.jpg" alt="MoD-IT" width="600" height="323"><span>GAMES</span></a>
@@ -31,9 +48,9 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy"><p class="eyebrow">INDEPENDENT GAMES · MADE FOR YOUR BROWSER</p>
         <h1 id="hero-title">A little time.<br>A little <em>adventure.</em></h1>
-        <p class="hero-description">A perfect park. A gentle docking. A hamster-sized expedition.<br class="desktop-break"> Small worlds to get lost in, one quick game at a time.</p>
+        <p class="hero-description">A good hand. A perfect park. A hamster-sized expedition.<br class="desktop-break"> Small worlds to explore. New tables to share with friends.</p>
         <aside class="play-promise"><strong>Serverless. No registration.</strong><p>Every game in this collection runs in your browser. No account needed — just pick a game and play.</p></aside>
-        <a class="primary-link" href="#keyboard">Find your next game <span aria-hidden="true">↗</span></a>
+        <a class="primary-link" href="#multiplayer">Find your next game <span aria-hidden="true">↗</span></a>
         <span class="hero-note">Free to play. No downloads. Just jump in.</span>
       </div>
       <div class="hero-art" aria-hidden="true">
@@ -44,13 +61,25 @@
         <span class="art-star star-one">✳</span><span class="art-star star-two">+</span><span class="art-caption">PRESS PAUSE ON THE EVERYDAY.</span>
       </div>
     </section>
-    <section id="multiplayer" class="upcoming multiplayer" aria-labelledby="multiplayer-title">
-      <div class="upcoming-top"><p class="eyebrow">01 / MULTIPLAYER</p><span class="status">COMING OCTOBER 1</span></div>
-      <div class="multiplayer-content">
-        <div class="multiplayer-copy"><h2 id="multiplayer-title">Good company.<br><span>Great games.</span></h2><p>Bring your friends to the table. A new multiplayer collection is on its way, with a focus on card games and board games. Play together in your browsers, on computers, phones, and tablets.</p><div class="multiplayer-themes"><span>Card games</span><span>Board games</span><span>Made for friends</span></div></div>
-        <div class="tabletop-art" aria-hidden="true"><div class="mini-board"><i></i><i></i><i></i></div><div class="table-card card-spade"><b>A</b><span>♠</span></div><div class="table-card card-heart"><b>7</b><span>♥</span></div><span class="tabletop-star">✳</span></div>
-      </div>
-      <div class="upcoming-bottom"><span>The collection opens</span><time datetime="2026-10-01">October 1, 2026</time></div>
+    <section id="multiplayer" class="collection multiplayer" aria-labelledby="multiplayer-title">
+      <div class="section-heading multiplayer-heading"><p class="eyebrow">01 / THE MULTIPLAYER COLLECTION</p><span class="section-tag live-tag"><i aria-hidden="true"></i>NOW PLAYING</span></div>
+      <a class="multiplayer-feature" href="../multiplayer/" aria-labelledby="multiplayer-title multiplayer-cta">
+        <div class="multiplayer-cover">
+          <picture>
+            <source type="image/webp" srcset="./assets/multiplayer-cover-600.webp 600w, ./assets/multiplayer-cover-1200.webp 1200w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 800px) calc(100vw - 64px), 50vw">
+            <img src="./assets/multiplayer-cover.jpg" alt="Ivory playing cards and a small green strategy board on an emerald table" width="1200" height="800" decoding="async">
+          </picture>
+          <span class="cover-label">CARDS, COMPANY &amp; A LITTLE STRATEGY</span>
+        </div>
+        <div class="multiplayer-copy">
+          <p class="eyebrow">YOUR FRIENDS. YOUR TABLE.</p>
+          <h2 id="multiplayer-title">Good company.<br><span>Great games.</span></h2>
+          <p class="multiplayer-description">Meet <strong>PLAN</strong>, our first multiplayer card game. Predict your tricks, share a room, and play with friends — wherever they are.</p>
+          <div class="multiplayer-themes"><span>2–6 players</span><span>Mouse &amp; touch</span><span>Desktop, phone &amp; tablet</span></div>
+          <p class="multiplayer-promise">Serverless. No registration. Just an invite link.</p>
+          <div class="multiplayer-bottom"><strong id="multiplayer-cta">Explore multiplayer <span aria-hidden="true">↗</span></strong><span>More card &amp; board games on the way.</span></div>
+        </div>
+      </a>
     </section>
     <section id="keyboard" class="collection" aria-labelledby="keyboard-title">
       <div class="section-heading"><div><p class="eyebrow">02 / THE KEYBOARD COLLECTION</p><h2 id="keyboard-title">Small games. <span>Full control.</span></h2></div><span class="section-tag">3 games · Keyboard required</span></div>
@@ -77,13 +106,56 @@
         <h2 id="mobile-title">Little escapes.<br>Right in your pocket.</h2><p>Games made for taps, swipes, and wherever life takes you. Something for your small screen is on the way.</p><div class="upcoming-bottom">Future releases <span>Stay curious ↗</span></div>
       </section>
       <section id="cross-platform" class="upcoming cross-platform" aria-labelledby="cross-title">
-        <div class="upcoming-top"><p class="eyebrow">04 / DESKTOP + MOBILE</p><span class="status">COMING OCTOBER 1</span></div>
-        <div class="device-art desktop-art" aria-hidden="true"><div class="monitor"><span>✳</span></div><div class="small-phone"><span>✳</span></div></div>
-        <h2 id="cross-title">Different screens.<br>Same sense of adventure.</h2><p>At your desk or on the go. A new collection of games built for both computers and mobile devices.</p><div class="upcoming-bottom"><span>First game arrives</span><time datetime="2026-10-01">October 1, 2026 <span aria-hidden="true">↗</span></time></div>
+        <div class="upcoming-top"><p class="eyebrow">04 / DESKTOP + MOBILE</p><span class="status">ON THE HORIZON</span></div>
+        <div class="device-art" aria-hidden="true"><div class="monitor"><span>✳</span></div><div class="small-phone">+</div></div>
+        <h2 id="cross-title">Your adventure.<br>Every screen.</h2>
+        <p>Single-player games for your computer, phone and tablet. No games here yet — new adventures are on the way.</p>
+        <div class="upcoming-bottom">Future releases <span>Single player · Mouse &amp; touch</span></div>
       </section>
     </div>
     <aside class="closing-note"><span aria-hidden="true">✳</span><p>A few minutes to spare. A new personal best to chase.<br><strong>There’s always room for a little play.</strong></p></aside>
   </main>
   <footer class="site-footer wrap"><a class="footer-brand" href="./">MoD-IT <span>/ GAMES</span></a><p>Created by <a href="https://www.linkedin.com/in/grzegorz-byrka-81175515/" target="_blank" rel="noopener noreferrer">Grzegorz Byrka <span class="sr-only">on LinkedIn (opens in a new tab)</span> ↗</a></p><span>Small worlds. Made with care.</span></footer>
+  <!-- Inline so even a cached HTML document checks the current release. -->
+  <script type="module">
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 10000);
+      let config;
+      try {
+        const response = await fetch(`./config.json?check=${Date.now().toString(36)}`, { cache: 'no-store', signal: controller.signal });
+        if (!response.ok) throw new Error('Configuration unavailable.');
+        config = await response.json();
+      } finally { clearTimeout(timeout); }
+      if (!config || !/^[a-z0-9]{3,16}$/i.test(config.version) || !Array.isArray(config.modules) || config.modules.length > 100) throw new Error('Invalid configuration.');
+      const imports = {};
+      for (const path of config.modules) {
+        if (typeof path !== 'string' || !/^\.\/[a-z0-9/-]+\.(?:mjs|js)$/i.test(path)) throw new Error('Invalid module path.');
+        const url = new URL(path, location.href);
+        imports[url.href] = `${url.href}?v=${encodeURIComponent(config.version)}`;
+      }
+      if (config.entry !== null && !config.modules.includes(config.entry)) throw new Error('Invalid entry module.');
+      if (config.entry !== null) {
+        if (!HTMLScriptElement.supports?.('importmap')) throw new Error('Import maps unavailable.');
+        const map = document.createElement('script');
+        map.type = 'importmap';
+        map.textContent = JSON.stringify({ imports });
+        document.head.append(map);
+      }
+      const style = document.querySelector('#app-style');
+      const styled = new Promise((resolve, reject) => {
+        style.onload = resolve;
+        style.onerror = () => reject(new Error('Styles unavailable.'));
+      });
+      style.href = `./style.css?v=${encodeURIComponent(config.version)}`;
+      document.querySelector('#app-icon').href = `./assets/favicon.svg?v=${encodeURIComponent(config.version)}`;
+      await styled;
+      if (config.entry !== null) await import(imports[new URL(config.entry, location.href).href]);
+      document.documentElement.dataset.appVersion = config.version;
+    } catch {
+      document.querySelector('#asset-error').hidden = false;
+      document.querySelector('#reload-assets').addEventListener('click', () => location.reload());
+    }
+  </script>
 </body>
 </html>
