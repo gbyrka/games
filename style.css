@@ -8,7 +8,7 @@
 @media(max-width:540px){.wrap{width:calc(100% - 36px)}.site-header{height:auto;min-height:112px;align-items:flex-start;padding:20px 0 15px;flex-direction:column;gap:15px}.brand img{width:75px}.brand>span{font-size:9px;padding:7px 0 7px 14px}.brand{gap:14px}.site-header nav{width:100%;justify-content:space-between;gap:12px}.site-header nav a{font-size:11px;padding:6px 0}.hero{padding:40px 0}.eyebrow{font-size:8px;letter-spacing:.12em}h1{font-size:clamp(42px,10.8vw,58px)}.hero-description{font-size:13px}.desktop-break{display:none}.hero-note{font-size:9px}h2{font-size:28px}.section-heading h2 span{display:block}.section-description{line-height:1.8}.game-card{display:flex}.cover{height:auto;min-height:0;aspect-ratio:1.55}.game-copy{padding:23px}.description{font-size:13px}.card-bottom strong{font-size:12px}.collection{padding-bottom:35px}.upcoming-grid{grid-template-columns:1fr}.upcoming{padding:25px}.upcoming-top{margin-bottom:35px}.upcoming h2{font-size:29px}.device-art{opacity:.3}.upcoming-bottom{flex-direction:row;flex-wrap:wrap}.closing-note{padding:27px 0;gap:15px}.closing-note p{font-size:10px}.site-footer{align-items:start;flex-direction:column;gap:12px}.site-footer p{margin:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 
-/* The live multiplayer collection: local artwork, a single generous link and quiet gold accents. */
+/* Multiplayer collection artwork and quiet gold accents. */
 .asset-error{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px;margin-top:16px;border:1px solid #ead6a76b;border-radius:8px;color:#ead6a7;font-size:13px;line-height:1.6}
 .asset-error[hidden]{display:none}
 .asset-error button{min-height:44px;padding:10px 16px;background:#ead6a7;color:#192e23;border:0;border-radius:5px;font:600 12px Arial,sans-serif;cursor:pointer}
@@ -45,3 +45,22 @@
 @media(max-width:1100px){.multiplayer-copy{padding:30px}.multiplayer-description{font-size:13px}.multiplayer-themes{font-size:9px;gap:8px 12px}}
 @media(max-width:800px){.multiplayer-feature{grid-template-columns:1fr}.multiplayer-cover{aspect-ratio:3/2}.multiplayer-copy{padding:32px}.multiplayer h2{font-size:42px}.multiplayer-heading{flex-direction:row;gap:15px}.multiplayer-description{max-width:570px}}
 @media(max-width:540px){.multiplayer{padding-bottom:40px}.multiplayer-heading{align-items:flex-start;flex-wrap:wrap;gap:12px}.multiplayer-heading .eyebrow{font-size:8px}.multiplayer-cover .cover-label{left:17px;bottom:15px;max-width:calc(100% - 34px);font-size:7px}.multiplayer-copy{padding:25px 23px}.multiplayer h2{font-size:36px}.multiplayer-description{font-size:13px;margin:18px 0}.multiplayer-themes{font-size:10px;gap:9px 12px}.multiplayer-bottom strong{width:100%;font-size:12px}.multiplayer-promise{font-size:10px}}
+
+/* Direct game entries with a separate link to the complete collection. */
+.multiplayer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.multiplayer-grid .game-card{display:flex;--accent:#ead6a7}
+.multiplayer-grid .tow{--accent:#c4ee91}
+.multiplayer-grid .cover{aspect-ratio:3/2;height:auto;min-height:0}
+.cover>picture,.cover>picture>img{display:block;width:100%;height:100%}
+.cover>picture>img{object-fit:cover;transition:transform .35s}
+.game-card:hover .cover>picture>img{transform:scale(1.025)}
+.multiplayer-facts{display:flex;flex-wrap:wrap;gap:10px 18px;font-size:11px;color:#d9e4d4;margin:0 0 22px}
+.keyboard-notice{position:absolute;top:18px;left:18px;max-width:calc(100% - 36px);padding:10px 13px;border:1px solid #fff1be80;border-radius:5px;background:#ead6a7;color:#17251e;font:750 11px/1.5 Arial,sans-serif;letter-spacing:.02em;box-shadow:0 3px 15px #0003}
+.all-multiplayer{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:20px;padding:23px 28px;border:1px solid #ead6a72d;border-radius:10px;background:#1b2b23;text-decoration:none;transition:border-color .2s}
+.all-multiplayer:hover{border-color:#ead6a7}
+.all-multiplayer .eyebrow{display:block;font-size:8px;color:#a3b39d;margin:0 0 9px}
+.all-multiplayer strong{font-size:18px;font-weight:500;color:#ead6a7}
+.all-multiplayer strong span{margin-left:18px}
+.all-multiplayer>span{font-size:11px;color:#a3b39d}
+@media(max-width:800px){.multiplayer-grid{grid-template-columns:1fr}.multiplayer-grid .game-copy{padding:25px}.multiplayer h2{font-size:36px}}
+@media(max-width:540px){.multiplayer-grid .card-bottom{flex-wrap:wrap;gap:14px}.keyboard-notice{top:14px;left:14px;max-width:calc(100% - 28px);font-size:10px}.all-multiplayer{padding:22px;align-items:flex-start;flex-direction:column;gap:14px}.multiplayer-grid .cover-label{font-size:7px}}

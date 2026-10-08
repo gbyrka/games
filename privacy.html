@@ -2,11 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script data-site-https>
+    (() => {
+      const { hostname, protocol, pathname, search, hash } = location;
+      const publicHosts = ['mod-it.games', 'www.mod-it.games', 'gbyrka.github.io'];
+      if (publicHosts.includes(hostname) && (protocol !== 'https:' || hostname !== 'mod-it.games')) {
+        location.replace(`https://mod-it.games${pathname}${search}${hash}`);
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111715">
   <meta name="google-adsense-account" content="ca-pub-3806610967714181">
   <meta name="description" content="How MoD-IT Games handles browser saves, multiplayer data, analytics, advertising and your privacy choices.">
-  <link rel="canonical" href="https://gbyrka.github.io/games/privacy.html">
+  <link rel="canonical" href="https://mod-it.games/games/privacy.html">
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <title>Privacy Policy — MoD-IT Games</title>
   <style>
@@ -45,13 +54,13 @@
 <body>
   <a class="skip-link" href="#main">Skip to privacy policy</a>
   <header class="wrap">
-    <a class="brand" href="./" aria-label="MoD-IT Games home"><img src="./assets/mod-it.jpg" alt="MoD-IT" width="600" height="323"><span>GAMES</span></a>
-    <a href="./">← Browse all games</a>
+    <a class="brand" href="https://mod-it.games/games/" aria-label="MoD-IT Games home"><img src="./assets/mod-it.jpg" alt="MoD-IT" width="600" height="323"><span>GAMES</span></a>
+    <a href="https://mod-it.games/games/">← Browse all games</a>
   </header>
   <main id="main" class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: <time datetime="2026-10-01">October 1, 2026</time></p>
-    <p class="intro">This policy explains how MoD-IT Games handles information when you browse the collection or play its browser games at <strong>gbyrka.github.io</strong>, including GAMES, DOCK, PARK, HAMSTER, SOKOBAN and the multiplayer collection.</p>
+    <p class="updated">Last updated: <time datetime="2026-10-08">October 8, 2026</time></p>
+    <p class="intro">This policy explains how MoD-IT Games handles information when you browse the collection or play its browser games at <strong><a href="https://mod-it.games/">https://mod-it.games</a></strong>, including GAMES, DOCK, PARK, HAMSTER, SOKOBAN and the multiplayer collection.</p>
     <p>You can play without creating an account. Some games save your progress on your device; multiplayer games exchange information with other players. Hosting, analytics and, where enabled, advertising also involve external services.</p>
     <nav aria-label="Privacy policy contents">
       <ol>
@@ -111,7 +120,7 @@
     <section id="choices" aria-labelledby="choices-title">
       <h2 id="choices-title">7. Cookies and your choices</h2>
       <p>Functional game storage remembers the progress and settings described above. Analytics and advertising storage serve separate purposes. Where consent is required, optional analytics, advertising storage and personalised advertising require your permission. Simply browsing or playing does not mean that you agree to these uses.</p>
-      <p>When the consent message is enabled, it can remember your choice across games under <strong>gbyrka.github.io</strong> in the same browser. Use its <strong>Privacy and cookie settings</strong> link to revisit your decision, where available. A new browser, cleared site data or a required consent renewal can cause the message to appear again.</p>
+      <p>When the consent message is enabled, it can remember your choice across games under <strong><a href="https://mod-it.games/">https://mod-it.games</a></strong> in the same browser. Use its <strong>Privacy and cookie settings</strong> link to revisit your decision, where available. A new browser, cleared site data or a required consent renewal can cause the message to appear again.</p>
       <p>You can also block cookies or delete site data in your browser. This can reset game saves, your remembered name and settings, and consent choices. Declining optional uses does not require an account or prevent local gameplay; blocking storage can prevent progress from being saved.</p>
     </section>
     <section id="retention" aria-labelledby="retention-title">
@@ -136,6 +145,6 @@
       <p>This policy may change when games, services or data practices change. The latest version is available on this page with its update date. Where a change requires a new consent decision, it must be requested separately.</p>
     </section>
   </main>
-  <footer class="wrap"><p><a href="./">← Back to MoD-IT Games</a> · Privacy Policy</p></footer>
+  <footer class="wrap"><p><a href="https://mod-it.games/games/">← Back to MoD-IT Games</a> · Privacy Policy</p></footer>
 </body>
 </html>

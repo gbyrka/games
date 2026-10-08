@@ -2,26 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script data-site-https>
+    (() => {
+      const { hostname, protocol, pathname, search, hash } = location;
+      const publicHosts = ['mod-it.games', 'www.mod-it.games', 'gbyrka.github.io'];
+      if (publicHosts.includes(hostname) && (protocol !== 'https:' || hostname !== 'mod-it.games')) {
+        location.replace(`https://mod-it.games${pathname}${search}${hash}`);
+      }
+    })();
+  </script>
   <meta name="google-adsense-account" content="ca-pub-3806610967714181">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111715">
   <meta name="description" content="Explore the MoD-IT collection of free, serverless browser games. No accounts or registration required. Small games. Big little adventures.">
   <title>MoD-IT Games — A little time. A little adventure.</title>
   <meta property="og:title" content="MoD-IT Games — A little time. A little adventure.">
-  <meta property="og:description" content="Free, serverless browser games by Grzegorz Byrka. Play PLAN with friends, or find a little solo adventure. No accounts or registration required.">
+  <meta property="og:description" content="Free, serverless browser games by Grzegorz Byrka. Play PLAN or race in TOW with friends, or find a little solo adventure. No accounts or registration required.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://gbyrka.github.io/games/">
+  <meta property="og:url" content="https://mod-it.games/games/">
   <meta property="og:site_name" content="MoD-IT Games">
-  <meta property="og:image" content="https://gbyrka.github.io/games/assets/multiplayer-cover.jpg">
+  <meta property="og:image" content="https://mod-it.games/games/assets/multiplayer-cover.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="800">
   <meta property="og:image:alt" content="Ivory playing cards and a small strategy board on an emerald table, introducing the multiplayer collection.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MoD-IT Games — Good games. Good company.">
-  <meta name="twitter:description" content="Free, serverless browser games. Play PLAN with friends — no registration required.">
-  <meta name="twitter:image" content="https://gbyrka.github.io/games/assets/multiplayer-cover.jpg">
-  <link rel="canonical" href="https://gbyrka.github.io/games/">
+  <meta name="twitter:description" content="Free, serverless browser games. Play PLAN or race in TOW with friends — no registration required.">
+  <meta name="twitter:image" content="https://mod-it.games/games/assets/multiplayer-cover.jpg">
+  <link rel="canonical" href="https://mod-it.games/games/">
   <link id="app-icon" rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link id="app-style" rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./ads.css?v=adlaunch1">
@@ -58,24 +67,19 @@
       </div>
     </section>
     <section id="multiplayer" class="collection multiplayer" aria-labelledby="multiplayer-title">
-      <div class="section-heading multiplayer-heading"><p class="eyebrow">01 / THE MULTIPLAYER COLLECTION</p><span class="section-tag live-tag"><i aria-hidden="true"></i>NOW PLAYING</span></div>
-      <a class="multiplayer-feature" href="../multiplayer/" aria-labelledby="multiplayer-title multiplayer-cta">
-        <div class="multiplayer-cover">
-          <picture>
-            <source type="image/webp" srcset="./assets/multiplayer-cover-600.webp 600w, ./assets/multiplayer-cover-1200.webp 1200w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 800px) calc(100vw - 64px), 50vw">
-            <img src="./assets/multiplayer-cover.jpg" alt="Ivory playing cards and a small green strategy board on an emerald table" width="1200" height="800" decoding="async">
-          </picture>
-          <span class="cover-label">CARDS, COMPANY &amp; A LITTLE STRATEGY</span>
-        </div>
-        <div class="multiplayer-copy">
-          <p class="eyebrow">YOUR FRIENDS. YOUR TABLE.</p>
-          <h2 id="multiplayer-title">Good company.<br><span>Great games.</span></h2>
-          <p class="multiplayer-description">Meet <strong>PLAN</strong>, our first multiplayer card game. Predict your tricks, share a room, and play with friends — wherever they are.</p>
-          <div class="multiplayer-themes"><span>2–6 players</span><span>Mouse &amp; touch</span><span>Desktop, phone &amp; tablet</span></div>
-          <p class="multiplayer-promise">Serverless. No registration. Just an invite link.</p>
-          <div class="multiplayer-bottom"><strong id="multiplayer-cta">Explore multiplayer <span aria-hidden="true">↗</span></strong><span>More card &amp; board games on the way.</span></div>
-        </div>
-      </a>
+      <div class="section-heading multiplayer-heading"><div><p class="eyebrow">01 / THE MULTIPLAYER COLLECTION</p><h2 id="multiplayer-title">Good company. <span>Great games.</span></h2></div><span class="section-tag live-tag"><i aria-hidden="true"></i>2 GAMES · NOW PLAYING</span></div>
+      <p class="section-description">A good hand. A close finish. Share an invite link and make a little time for friends.</p>
+      <div class="game-grid multiplayer-grid">
+        <a class="game-card plan" href="../multiplayer/?game=plan" aria-labelledby="plan-title plan-cta">
+          <div class="cover"><picture><source type="image/webp" srcset="./assets/multiplayer-cover-600.webp 600w, ./assets/multiplayer-cover-1200.webp 1200w" sizes="(max-width: 800px) calc(100vw - 36px), 50vw"><img src="./assets/multiplayer-cover.jpg" alt="Ivory playing cards on an emerald table" width="1200" height="800" decoding="async"></picture><span class="cover-label">CARDS &amp; PREDICTIONS · ONLINE MULTIPLAYER</span></div>
+          <div class="game-copy"><div class="game-title"><h3 id="plan-title">PLAN</h3><span class="game-number">01</span></div><p class="tagline">Predict your tricks.</p><p class="description">A little strategy. A little intuition. Predict your tricks, share a table, and play six rounds with friends — wherever they are.</p><div class="multiplayer-facts"><span>2–6 players</span><span>20–60 min</span><span>Mouse &amp; touch</span></div><div class="card-bottom"><span>Desktop, phone &amp; tablet<span class="input-label">No registration. Just an invite link.</span></span><strong id="plan-cta">Play PLAN <span aria-hidden="true">↗</span></strong></div></div>
+        </a>
+        <a class="game-card tow" href="../multiplayer/games/tow/" aria-labelledby="tow-title tow-cta" aria-describedby="tow-keyboard">
+          <div class="cover"><picture><source type="image/webp" srcset="./assets/tow-cover-600.webp 600w, ./assets/tow-cover-1200.webp 1200w" sizes="(max-width: 800px) calc(100vw - 36px), 50vw"><img src="./assets/tow-cover.jpg" alt="Four colorful cars towing ivory trailers around a winding forest road" width="1200" height="800" decoding="async"></picture><span id="tow-keyboard" class="keyboard-notice">Keyboard controls only for now</span><span class="cover-label">TRAILER RACING · ONLINE MULTIPLAYER</span></div>
+          <div class="game-copy"><div class="game-title"><h3 id="tow-title">TOW</h3><span class="game-number">02</span></div><p class="tagline">Keep your trailer close.</p><p class="description">Race your friends along a new winding road. Dodge the barrels, mind the corners, and bring your trailer across the finish.</p><div class="multiplayer-facts"><span>2–4 drivers</span><span>1–3 min</span><span>Keyboard required</span></div><div class="card-bottom"><span>↑ ↓ ← → <span class="input-label">No registration. Just an invite link.</span></span><strong id="tow-cta">Play TOW <span aria-hidden="true">↗</span></strong></div></div>
+        </a>
+      </div>
+      <a class="all-multiplayer" href="../multiplayer/"><div><span class="eyebrow">YOUR FRIENDS. YOUR NEXT GAME.</span><strong>All multiplayer <span aria-hidden="true">↗</span></strong></div><span>Explore the multiplayer collection</span></a>
     </section>
     <section id="keyboard" class="collection" aria-labelledby="keyboard-title">
       <div class="section-heading"><div><p class="eyebrow">02 / THE KEYBOARD COLLECTION</p><h2 id="keyboard-title">Small games. <span>Full control.</span></h2></div><span class="section-tag">3 games · Keyboard required</span></div>

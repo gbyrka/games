@@ -1,6 +1,6 @@
 # MoD-IT Games
 
-The English-language landing page for the MoD-IT browser game collection. Plain HTML and CSS, with no build step or runtime dependencies.
+The English-language landing page for the MoD-IT browser game collection. Its multiplayer section links directly to PLAN (`../multiplayer/?game=plan`), TOW (`../multiplayer/games/tow/`) and **All multiplayer** (`../multiplayer/`). TOW's cover prominently says **Keyboard controls only for now**; both multiplayer cards use the catalog's existing visual language. Plain HTML and CSS, with no build step or runtime dependencies.
 
 ## Preview
 
@@ -10,15 +10,17 @@ Serve the parent folder containing `games`, `multiplayer`, `dock`, `park`, and `
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000/games/`. Sibling links also work on GitHub Pages at `https://gbyrka.github.io/games/`, with each game published in its own repository.
+Open `http://localhost:8000/games/`. Sibling links also work on GitHub Pages at `https://mod-it.games/games/`, with each game published in its own repository.
 
 ## Publish
 
 Publish this repository's root to GitHub Pages. Include `index.html`, `privacy.html`, `config.json`, `style.css`, `ads.css`, `monetization.js`, and `assets/`.
 
+The public catalog is `https://mod-it.games/games/`. The custom domain belongs to the sibling user-site repository `gbyrka.github.io`; project sites inherit it. Keep the HTTPS redirect at the start of both HTML entry pages: it preserves paths, room/challenge parameters and fragments when upgrading HTTP or moving from the old GitHub hostname. Relative game links remain on HTTPS, while local HTTP previews still work.
+
 ## Privacy policy
 
-`privacy.html` covers the collection's local game saves, multiplayer room/chat data, GitHub Pages hosting, Google Analytics, and AdSense where enabled. The catalog footer links to it. After publication, use `https://gbyrka.github.io/games/privacy.html` as the privacy policy URL in AdSense.
+`privacy.html` covers the collection's local game saves, multiplayer room/chat data, GitHub Pages hosting, Google Analytics, and AdSense where enabled. The catalog footer links to it. After publication, use `https://mod-it.games/games/privacy.html` as the privacy policy URL in AdSense.
 
 The policy page is standalone HTML with inline styles and local assets; it loads no analytics, advertising, or consent scripts. Keep it that way so visitors can read it before making a consent choice. The AdSense verification metatag does not load scripts or ads.
 
@@ -30,9 +32,9 @@ The catalog has one responsive `games_catalog` unit (`7475979927`) after the clo
 
 Each Pages project includes its own identical `monetization.js` and `ads.css` so it can deploy independently. The Google AdSense script is loaded once per document. Ad units are requested once as they approach the viewport; blocked scripts or unfilled units hide the ad section. No ads or analytics are added to the privacy page or the root redirect.
 
-In AdSense, publish the Google CMP message for `gbyrka.github.io`. In **Privacy & messaging → European regulations → Settings**, enable Consent Mode for **advertising** and **analytics**. Keep Auto ads off when using these manual placements. `monetization.js` starts with denied consent and loads Google Analytics only after Google CMP reports analytics consent as granted or not applicable. Unknown, denied or unconfigured consent does not load Analytics, and gameplay events before permission are discarded. AdSense handles its own ad consent through the CMP.
+In AdSense, publish the Google CMP message for `mod-it.games`. In **Privacy & messaging → European regulations → Settings**, enable Consent Mode for **advertising** and **analytics**. Keep Auto ads off when using these manual placements. `monetization.js` starts with denied consent and loads Google Analytics only after Google CMP reports analytics consent as granted or not applicable. Unknown, denied or unconfigured consent does not load Analytics, and gameplay events before permission are discarded. AdSense handles its own ad consent through the CMP.
 
-Publish `ads.txt` from the separate `gbyrka.github.io` repository so it is available at `https://gbyrka.github.io/ads.txt`. Publish all six project repositories to activate their placements. Check the consent flow and responsiveness on the published site; ad availability still depends on Google's serving decisions.
+Publish `ads.txt` from the separate `gbyrka.github.io` repository so it is available at `https://mod-it.games/ads.txt`. Publish all six project repositories to activate their placements. Check the consent flow and responsiveness on the published site; ad availability still depends on Google's serving decisions.
 
 ## Release version and browser cache
 
