@@ -1,6 +1,6 @@
 # MoD-IT Games
 
-The English-language landing page for the MoD-IT browser game collection. Its multiplayer section links directly to PLAN (`../multiplayer/?game=plan`), TOW (`../multiplayer/games/tow/`) and **All multiplayer** (`../multiplayer/`). TOW's cover prominently says **Keyboard controls only for now**; both multiplayer cards use the catalog's existing visual language. Plain HTML and CSS, with no build step or runtime dependencies.
+The English-language landing page for the MoD-IT browser game collection. Its multiplayer section links directly to PLAN (`../multiplayer/?game=plan`), TOW (`../multiplayer/games/tow/`), Catana Codex (`../multiplayer/games/catana/`) and **All multiplayer** (`../multiplayer/`). TOW's cover prominently says **Keyboard controls only for now**; all three multiplayer cards use the catalog's existing visual language. Plain HTML and CSS, with no build step or runtime dependencies.
 
 ## Preview
 
@@ -48,7 +48,7 @@ The catalog currently needs no application JavaScript. When adding it, set `entr
 
 Copy a `.game-card` into the appropriate section, give its title and call to action unique IDs, update `aria-labelledby`, and set the game URL, image, description, and controls. Update the visible game count. Replace the mobile-only announcement when a game for that category is ready.
 
-Multiplayer is the first collection section, with a generated emerald/ivory cover and a large link to `../multiplayer/`. PLAN is available now; more card and board games are on the way. The desktop + mobile section is reserved for future single-player games and currently has no games or links. The earlier October 1 release announcements have been removed. Every game is serverless and requires no registration.
+Multiplayer is the first collection section, with local cover artwork and a large link to `../multiplayer/`. PLAN, TOW and Catana Codex are available now. The desktop + mobile section is reserved for future single-player games and currently has no games or links. The earlier October 1 release announcements have been removed. Every game is serverless and requires no registration.
 
 ## Artwork and social sharing
 
@@ -56,6 +56,7 @@ Multiplayer is the first collection section, with a generated emerald/ivory cove
 - `assets/multiplayer-cover.jpg`: optimized JPEG for the catalog's Open Graph preview and image fallback.
 - `assets/multiplayer-cover-600.webp` and `assets/multiplayer-cover-1200.webp`: responsive cover artwork for the featured link.
 - `assets/plan-social.jpg` and `assets/plan-social-*.webp`: saved PLAN campaign art. The master is in the sibling multiplayer repository at `marketing/plan-social.png`.
+- `assets/catana-cover.jpg` and `assets/catana-cover-*.webp`: generated Catana Codex artwork. The full-resolution master and final built-in tool prompt are in the sibling multiplayer repository at `marketing/catana-cover.png` and [marketing/CATANA-PROMPT.md](../multiplayer/marketing/CATANA-PROMPT.md).
 - `marketing/PROMPTS.md`: the final collection-art prompt and generation method. The PLAN prompt is saved alongside its master in the multiplayer repository.
 
 Art was generated using the built-in image tool. Web copies are compressed/downscaled from the original art; they have no externally hosted image dependencies. Publish each repository with its own assets: the catalog also keeps its own copy of the PLAN artwork.
