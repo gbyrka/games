@@ -62,6 +62,5 @@
 .all-multiplayer strong{font-size:18px;font-weight:500;color:#ead6a7}
 .all-multiplayer strong span{margin-left:18px}
 .all-multiplayer>span{font-size:11px;color:#a3b39d}
-@media(min-width:1101px){.multiplayer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:800px){.multiplayer-grid{grid-template-columns:1fr}.multiplayer-grid .game-copy{padding:25px}.multiplayer h2{font-size:36px}}
 @media(max-width:540px){.multiplayer-grid .card-bottom{flex-wrap:wrap;gap:14px}.keyboard-notice{top:14px;left:14px;max-width:calc(100% - 28px);font-size:10px}.all-multiplayer{padding:22px;align-items:flex-start;flex-direction:column;gap:14px}.multiplayer-grid .cover-label{font-size:7px}}

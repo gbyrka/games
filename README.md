@@ -1,6 +1,6 @@
 # MoD-IT Games
 
-The English-language landing page for the MoD-IT browser game collection. Its multiplayer section links directly to PLAN (`../multiplayer/?game=plan`), TOW (`../multiplayer/games/tow/`), Catana Codex (`../multiplayer/games/catana/`) and **All multiplayer** (`../multiplayer/`). TOW's cover prominently says **Keyboard controls only for now**; all three multiplayer cards use the catalog's existing visual language. Plain HTML and CSS, with no build step or runtime dependencies.
+The English-language landing page for the MoD-IT browser game collection. Its multiplayer section links directly to PLAN (`../multiplayer/?game=plan`), TOW (`../multiplayer/games/tow/`), Catana Codex (`../multiplayer/games/catana/`), HAMSTER multiplayer (`../multiplayer/games/hamster/`) and **All multiplayer** (`../multiplayer/`). TOW's cover prominently says **Keyboard controls only for now**; all four multiplayer cards use the catalog's existing visual language. Plain HTML and CSS, with no build step or runtime dependencies.
 
 ## Preview
 
@@ -48,7 +48,7 @@ The catalog currently needs no application JavaScript. When adding it, set `entr
 
 Copy a `.game-card` into the appropriate section, give its title and call to action unique IDs, update `aria-labelledby`, and set the game URL, image, description, and controls. Update the visible game count. Replace the mobile-only announcement when a game for that category is ready.
 
-Multiplayer is the first collection section, with local cover artwork and a large link to `../multiplayer/`. PLAN, TOW and Catana Codex are available now. The desktop + mobile section is reserved for future single-player games and currently has no games or links. The earlier October 1 release announcements have been removed. Every game is serverless and requires no registration.
+Multiplayer is the first collection section, with local cover artwork and a large link to `../multiplayer/`. Catana Codex, HAMSTER multiplayer, PLAN and TOW are available now, in that order in a two-column grid (one column on smaller screens). The desktop + mobile section is reserved for future single-player games and currently has no games or links. The earlier October 1 release announcements have been removed. Every game is serverless and requires no registration.
 
 ## Artwork and social sharing
 
