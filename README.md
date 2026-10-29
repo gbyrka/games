@@ -1,6 +1,6 @@
 # MoD-IT Games
 
-The English-language landing page for the MoD-IT browser game collection. Its multiplayer section links directly to PLAN (`../multiplayer/?game=plan`), TOW (`../multiplayer/games/tow/`), Catana Codex (`../multiplayer/games/catana/`), HAMSTER multiplayer (`../multiplayer/games/hamster/`) and **All multiplayer** (`../multiplayer/`). TOW's cover prominently says **Keyboard controls only for now**; all four multiplayer cards use the catalog's existing visual language. Plain HTML and CSS, with no build step or runtime dependencies.
+The English-language landing page for the MoD-IT browser game collection. The compact multiplayer section links to Catana Codex, HAMSTER multiplayer, TOW, CHESS, CHECKERS and PLAN, followed by a small link to the multiplayer collection. TOW's cover prominently says **Keyboard controls only for now**. Plain HTML and CSS, with no build step or runtime dependencies.
 
 ## Preview
 
@@ -28,7 +28,7 @@ Review this page when changing services or storage. Confirm Analytics retention 
 
 ## Advertising and consent
 
-The catalog has one responsive `games_catalog` unit (`7475979927`) after the closing note, before the footer. Each game has one `game_footer` unit (`9380002810`) in a separate section below its game shell and controls, with at least 150px of separation. The sections use neutral `ADVERTISEMENT` labels, inherit the site's colours and do not change game viewport sizes.
+The catalog has one responsive `games_catalog` unit (`7475979927`) after the category sections, before the footer. Each game has one `game_footer` unit (`9380002810`) in a separate section below its game shell and controls, with at least 150px of separation. The sections use neutral `ADVERTISEMENT` labels, inherit the site's colours and do not change game viewport sizes.
 
 Each Pages project includes its own identical `monetization.js` and `ads.css` so it can deploy independently. The Google AdSense script is loaded once per document. Ad units are requested once as they approach the viewport; blocked scripts or unfilled units hide the ad section. No ads or analytics are added to the privacy page or the root redirect.
 
@@ -48,9 +48,11 @@ The catalog currently needs no application JavaScript. When adding it, set `entr
 
 Copy a `.game-card` into the appropriate section, give its title and call to action unique IDs, update `aria-labelledby`, and set the game URL, image, description, and controls. Update the visible game count. Replace the mobile-only announcement when a game for that category is ready.
 
-Multiplayer is the first collection section, with local cover artwork and a large link to `../multiplayer/`. Catana Codex, HAMSTER multiplayer, PLAN and TOW are available now, in that order in a two-column grid (one column on smaller screens). The desktop + mobile section is reserved for future single-player games and currently has no games or links. The earlier October 1 release announcements have been removed. Every game is serverless and requires no registration.
+Multiplayer is the first collection section, with local cover artwork and a compact introduction. On desktop, its six cards form two rows of three: Catana Codex / HAMSTER multiplayer / TOW, then CHESS / CHECKERS / PLAN. The grid uses two columns at 541–900px and one column at 540px or below. Keyboard games follow; the mobile and desktop + mobile placeholders are compact rows. Every game is serverless and requires no registration.
 
 ## Artwork and social sharing
+
+The CHESS and CHECKERS cards use `assets/chess-cover.jpg`, `assets/checkers-cover.jpg` and their `-600.webp`/`-1200.webp` variants. Both games are linked from this catalog; the separate multiplayer collection still omits them. Masters and exact prompts are in the sibling multiplayer repository at [marketing/BOARD-GAMES-PROMPTS.md](../multiplayer/marketing/BOARD-GAMES-PROMPTS.md); the same folder contains the chess LinkedIn graphic and upload-ready JPEG.
 
 - `marketing/multiplayer-cover.png`: original full-resolution collection artwork.
 - `assets/multiplayer-cover.jpg`: optimized JPEG for the catalog's Open Graph preview and image fallback.
@@ -65,4 +67,4 @@ The HTML includes [Open Graph](https://ogp.me/) title, description, canonical UR
 
 Cover artwork for DOCK and HAMSTER comes from their existing repositories. PARK uses an actual gameplay capture. Assets are local so the catalog deploys independently. Analytics uses the same `G-WTPHWDLQ7K` stream as the games. Author attribution links to Grzegorz Byrka on LinkedIn.
 
-The launch layout was verified in Chromium at 320, 390, 768, 1024, and 1440 px with no page overflow or broken artwork. Multiplayer navigation and both sites' share-image dimensions were checked with no console/runtime errors.
+The launch layout was verified in Chromium at 320, 390, 768, 900, 1024, 1280, and 1440 px with no page overflow or broken artwork. Multiplayer navigation and both sites' share-image dimensions were checked with no console/runtime errors.
