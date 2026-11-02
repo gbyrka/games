@@ -4,7 +4,7 @@ The English-language landing page for the MoD-IT browser game collection. The co
 
 ## Preview
 
-Serve the parent folder containing `games`, `multiplayer`, `dock`, `park`, and `hamster`:
+Serve the parent folder containing `games`, `multiplayer`, `dock`, `park`, `hamster`, and `sokoban`:
 
 ```sh
 python3 -m http.server 8000
@@ -28,9 +28,9 @@ Review this page when changing services or storage. Confirm Analytics retention 
 
 ## Advertising and consent
 
-The catalog has one responsive `games_catalog` unit (`7475979927`) after the category sections, before the footer. Each game has one `game_footer` unit (`9380002810`) in a separate section below its game shell and controls, with at least 150px of separation. The sections use neutral `ADVERTISEMENT` labels, inherit the site's colours and do not change game viewport sizes.
+The catalog has one responsive `games_catalog` unit (`7475979927`) after the category sections, before the footer. The eligible game pages have one `game_footer` unit (`9380002810`) in a separate section below its game shell and controls, with 180px of separation on both sides. The sections use neutral `Advertisements` labels, use clearly separated borders and do not change game viewport sizes.
 
-Each Pages project includes its own identical `monetization.js` and `ads.css` so it can deploy independently. The Google AdSense script is loaded once per document. Ad units are requested once as they approach the viewport; blocked scripts or unfilled units hide the ad section. No ads or analytics are added to the privacy page or the root redirect.
+Each Pages project includes its own identical `monetization.js` and `ads.css` so it can deploy independently. The Google AdSense script is loaded once per document. Ad units are requested once when they enter the viewport; blocked scripts or unfilled units hide the ad section. No ads or analytics are added to the privacy page or the root homepage.
 
 In AdSense, publish the Google CMP message for `mod-it.games`. In **Privacy & messaging → European regulations → Settings**, enable Consent Mode for **advertising** and **analytics**. Keep Auto ads off when using these manual placements. `monetization.js` starts with denied consent and loads Google Analytics only after Google CMP reports analytics consent as granted or not applicable. Unknown, denied or unconfigured consent does not load Analytics, and gameplay events before permission are discarded. AdSense handles its own ad consent through the CMP.
 
@@ -46,9 +46,9 @@ The catalog currently needs no application JavaScript. When adding it, set `entr
 
 ## Add a game
 
-Copy a `.game-card` into the appropriate section, give its title and call to action unique IDs, update `aria-labelledby`, and set the game URL, image, description, and controls. Update the visible game count. Replace the mobile-only announcement when a game for that category is ready.
+Copy a `.game-card` into the appropriate section, give its title and call to action unique IDs, update `aria-labelledby`, and set the game URL, image, description, and controls. Update the visible game count. Only add navigation links to categories containing playable games; do not link to empty coming-soon sections.
 
-Multiplayer is the first collection section, with local cover artwork and a compact introduction. On desktop, its six cards form two rows of three: Catana Codex / HAMSTER multiplayer / TOW, then CHESS / CHECKERS / PLAN. The grid uses two columns at 541–900px and one column at 540px or below. Keyboard games follow; the mobile and desktop + mobile placeholders are compact rows. Every game is serverless and requires no registration.
+Multiplayer is the first collection section, with local cover artwork and a compact introduction. On desktop, its six cards form two rows of three: Catana Codex / HAMSTER multiplayer / TOW, then CHESS / CHECKERS / PLAN. The grid uses two columns at 541–900px and one column at 540px or below. Keyboard games follow, then **Keyboard and mobile** with SOKOBAN at `https://mod-it.games/sokoban/`. Its cover (`assets/sokoban-cover.jpg`) is a real gameplay capture. The catalog only links to populated categories. Every game is serverless and requires no registration.
 
 ## Artwork and social sharing
 
@@ -68,3 +68,21 @@ The HTML includes [Open Graph](https://ogp.me/) title, description, canonical UR
 Cover artwork for DOCK and HAMSTER comes from their existing repositories. PARK uses an actual gameplay capture. Assets are local so the catalog deploys independently. Analytics uses the same `G-WTPHWDLQ7K` stream as the games. Author attribution links to Grzegorz Byrka on LinkedIn.
 
 The launch layout was verified in Chromium at 320, 390, 768, 900, 1024, 1280, and 1440 px with no page overflow or broken artwork. Multiplayer navigation and both sites' share-image dimensions were checked with no console/runtime errors.
+
+## AdSense navigation audit
+
+The root homepage is now real static content with explicit game links rather than
+a JavaScript-only redirect. The catalog omits empty Mobile/Cross-platform
+categories. CHESS, CHECKERS and Boggle have no manual ad units: their About
+dialogs contain information only. Their shared AdSense bootstrap remains for
+the existing CMP integration, so **Auto ads must remain off in AdSense**.
+The code cannot change that account setting. Other game/footer placements are
+ordinary document sections, with 180px separation from preceding content and
+following navigation. The shared helper refuses placements inside navigation,
+private chat, dialogs, or fixed/sticky containers, and refuses misleading labels.
+Once requested, a unit stays attached and visible through SPA transitions;
+blocked or unfilled units are hidden, and units are never refreshed on moves.
+
+See the sibling `gbyrka.github.io/ADSENSE-AUDIT.md` for findings, deployment scope,
+Google references and the remaining AdSense account checks. Google alone decides
+whether the site passes review.

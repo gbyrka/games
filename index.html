@@ -33,8 +33,8 @@
   <link rel="canonical" href="https://mod-it.games/games/">
   <link id="app-icon" rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link id="app-style" rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./ads.css?v=adlaunch1">
-  <script src="./monetization.js?v=adlaunch1"></script>
+  <link rel="stylesheet" href="./ads.css?v=adnav1">
+  <script src="./monetization.js?v=adnav1"></script>
   <script id="adsense-script" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3806610967714181"
           crossorigin="anonymous" onerror="window.MoDITAds.unavailable()"></script>
 </head>
@@ -46,7 +46,7 @@
   <a class="skip-link" href="#main">Skip to games</a>
   <header class="site-header wrap">
     <a class="brand" href="./" aria-label="MoD-IT Games home"><img src="assets/mod-it.jpg" alt="MoD-IT" width="600" height="323"><span>GAMES</span></a>
-    <nav aria-label="Game categories"><a href="#multiplayer">Multiplayer</a><a href="#keyboard">Keyboard</a><a href="#mobile">Mobile</a><a href="#cross-platform">Desktop + mobile</a></nav>
+    <nav aria-label="Game categories"><a href="#multiplayer">Multiplayer</a><a href="#keyboard">Keyboard</a><a href="#keyboard-mobile">Keyboard and mobile</a></nav>
   </header>
   <main id="main" class="wrap">
     <div class="catalog-intro"><h1>Browser games</h1><p>Free. No registration. No downloads.</p></div>
@@ -97,12 +97,17 @@
         </a>
       </div>
     </section>
-    <div class="upcoming-grid">
-      <section id="mobile" class="upcoming" aria-labelledby="mobile-title"><h2 id="mobile-title">Mobile</h2><span class="status">Coming soon</span></section>
-      <section id="cross-platform" class="upcoming" aria-labelledby="cross-title"><h2 id="cross-title">Desktop + mobile</h2><span class="status">Coming soon</span></section>
-    </div>
+    <section id="keyboard-mobile" class="collection" aria-labelledby="keyboard-mobile-title">
+      <div class="section-heading"><h2 id="keyboard-mobile-title">Keyboard and mobile</h2><span class="section-tag">1 game · Keyboard &amp; touch</span></div>
+      <div class="game-grid">
+        <a class="game-card sokoban" href="../sokoban/" aria-labelledby="sokoban-title sokoban-cta">
+          <div class="cover"><img src="./assets/sokoban-cover.jpg" alt="Sokoban warehouse puzzle with wooden crates, diamond targets and a warehouse keeper" width="1200" height="800" decoding="async" loading="lazy"></div>
+          <div class="game-copy"><div class="game-title"><h3 id="sokoban-title">SOKOBAN</h3></div><p class="description">Push every crate onto a target. Start easy, then explore 50 classic puzzles.</p><div class="multiplayer-facts"><span>1 player</span><span>Unlimited undo</span><span>Keyboard &amp; touch</span></div><div class="card-bottom"><strong id="sokoban-cta">Play SOKOBAN <span aria-hidden="true">↗</span></strong></div></div>
+        </a>
+      </div>
+    </section>
     <aside class="ad-placement ad-placement-catalog" aria-label="Advertisement">
-      <p class="ad-placement-label">ADVERTISEMENT</p>
+      <p class="ad-placement-label">Advertisements</p>
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-3806610967714181"

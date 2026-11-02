@@ -24,6 +24,7 @@ h2{font-size:22px;line-height:1.3;letter-spacing:-.03em;font-weight:500;margin:0
 .game-card:hover{transform:translateY(-2px);border-color:var(--accent)}
 .game-card.park{--accent:#c0e894}
 .game-card.hamster{--accent:#edc594}
+.game-card.sokoban{--accent:#e1b675}
 .multiplayer-grid .game-card{--accent:#ead6a7}
 .multiplayer-grid .tow{--accent:#c4ee91}
 .cover{position:relative;aspect-ratio:3/2;overflow:hidden;background:#27352c}
@@ -44,7 +45,7 @@ h3{font-size:22px;line-height:1.3;letter-spacing:-.035em;margin:0;overflow-wrap:
 .keyboard-notice{position:absolute;top:14px;left:14px;max-width:calc(100% - 28px);padding:8px 10px;border:1px solid #fff1be80;border-radius:4px;background:#ead6a7;color:#17251e;font:700 10px/1.5 Arial,sans-serif}
 .collection-link{display:inline-flex;align-items:center;gap:12px;min-height:44px;margin-top:8px;color:#c6cfc2;font-size:11px;text-underline-offset:4px}
 .collection-link:hover{color:var(--lime)}
-#keyboard{border-top:1px solid var(--line);padding-top:26px}
+#keyboard,#keyboard-mobile{border-top:1px solid var(--line);padding-top:26px}
 .upcoming-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:28px}
 .upcoming{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px;border:1px solid var(--line);border-radius:8px}
 .upcoming h2{font-size:16px}
