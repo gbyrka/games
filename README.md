@@ -1,6 +1,6 @@
 # MoD-IT Games
 
-The English-language landing page for the MoD-IT browser game collection. The compact multiplayer section links to Catana Codex, HAMSTER multiplayer, TOW, CHESS, CHECKERS and PLAN, followed by a small link to the multiplayer collection. TOW's cover prominently says **Keyboard controls only for now**. Plain HTML and CSS, with no build step or runtime dependencies.
+The English-language landing page for the MoD-IT browser game collection. The compact multiplayer section links to Catana Codex, HAMSTER multiplayer, TOW, TOW: Driver’s Seat, Boggle, CHESS, CHECKERS and PLAN, followed by a small link to the multiplayer collection. Both TOW covers prominently say **Keyboard controls only for now**. Plain HTML and CSS, with no build step or runtime dependencies.
 
 ## Preview
 
@@ -48,11 +48,13 @@ The catalog currently needs no application JavaScript. When adding it, set `entr
 
 Copy a `.game-card` into the appropriate section, give its title and call to action unique IDs, update `aria-labelledby`, and set the game URL, image, description, and controls. Update the visible game count. Only add navigation links to categories containing playable games; do not link to empty coming-soon sections.
 
-Multiplayer is the first collection section, with local cover artwork and a compact introduction. On desktop, its six cards form two rows of three: Catana Codex / HAMSTER multiplayer / TOW, then CHESS / CHECKERS / PLAN. The grid uses two columns at 541–900px and one column at 540px or below. Keyboard games follow, then **Keyboard and mobile** with SOKOBAN at `https://mod-it.games/sokoban/`. Its cover (`assets/sokoban-cover.jpg`) is a real gameplay capture. The catalog only links to populated categories. Every game is serverless and requires no registration.
+Multiplayer is the first collection section, with local cover artwork and a compact introduction. On desktop, its eight cards form two rows of four: Catana Codex / HAMSTER multiplayer / TOW / TOW: Driver’s Seat, then Boggle / CHESS / CHECKERS / PLAN. The grid uses two columns at 541–900px and one column at 540px or below. Keyboard games follow, then **Keyboard and mobile** with SOKOBAN at `https://mod-it.games/sokoban/`. Its cover (`assets/sokoban-cover.jpg`) is a real gameplay capture. The catalog only links to populated categories. Every game is serverless and requires no registration.
 
 ## Artwork and social sharing
 
-The CHESS and CHECKERS cards use `assets/chess-cover.jpg`, `assets/checkers-cover.jpg` and their `-600.webp`/`-1200.webp` variants. Both games are linked from this catalog; the separate multiplayer collection still omits them. Masters and exact prompts are in the sibling multiplayer repository at [marketing/BOARD-GAMES-PROMPTS.md](../multiplayer/marketing/BOARD-GAMES-PROMPTS.md); the same folder contains the chess LinkedIn graphic and upload-ready JPEG.
+Driver’s Seat and Boggle are public and indexable. Each has its own generated cover, responsive JPEG/WebP copies here, and a dedicated social preview in the multiplayer repository. Full-resolution LinkedIn posters, upload-ready JPEGs and final built-in-tool prompts are in [marketing/DRIVERS-SEAT-BOGGLE-PROMPTS.md](../multiplayer/marketing/DRIVERS-SEAT-BOGGLE-PROMPTS.md). Both posters show `https://mod-it.games`.
+
+The CHESS and CHECKERS cards use `assets/chess-cover.jpg`, `assets/checkers-cover.jpg` and their `-600.webp`/`-1200.webp` variants. Both games are linked from this catalog and the separate multiplayer collection. Masters and exact prompts are in the sibling multiplayer repository at [marketing/BOARD-GAMES-PROMPTS.md](../multiplayer/marketing/BOARD-GAMES-PROMPTS.md); the same folder contains the chess LinkedIn graphic and upload-ready JPEG.
 
 - `marketing/multiplayer-cover.png`: original full-resolution collection artwork.
 - `assets/multiplayer-cover.jpg`: optimized JPEG for the catalog's Open Graph preview and image fallback.

@@ -19,7 +19,7 @@ h1{font-size:22px;line-height:1.3;font-weight:500;letter-spacing:-.03em;margin:0
 .section-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:16px}
 h2{font-size:22px;line-height:1.3;letter-spacing:-.03em;font-weight:500;margin:0}
 .section-tag{font-size:10px;line-height:1.6;color:var(--muted);text-align:right}
-.game-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.game-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
 .game-card{display:flex;flex-direction:column;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;text-decoration:none;transition:transform .2s,border-color .2s;--accent:#8bc9da}
 .game-card:hover{transform:translateY(-2px);border-color:var(--accent)}
 .game-card.park{--accent:#c0e894}
