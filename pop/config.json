@@ -1,0 +1,4 @@
+{
+  "version": "pop17nov1",
+  "modules": ["./app.mjs", "./session.mjs", "./settings.mjs", "./storage.mjs"]
+}

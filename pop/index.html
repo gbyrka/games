@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>(()=>{const{hostname,protocol,pathname,search,hash}=location;if(['mod-it.games','www.mod-it.games','gbyrka.github.io'].includes(hostname)&&(protocol!=='https:'||hostname!=='mod-it.games'))location.replace(`https://mod-it.games${pathname}${search}${hash}`);})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#101714">
+  <meta name="description" content="Classic DOS platform game. Play with a keyboard, original graphics and sound, and local checkpoints.">
+  <link rel="canonical" href="https://mod-it.games/games/pop/">
+  <link rel="icon" href="./favicon.svg">
+  <title>POP · MoD-IT</title>
+  <style>body{margin:0;background:#101714;color:#f1ead6;font-family:system-ui,sans-serif}[hidden]{display:none!important}.boot{padding:48px;text-align:center}</style>
+</head>
+<body>
+  <a class="skip-link" href="#screen">Skip to game</a>
+  <header>
+    <a class="brand" href="../" aria-label="MoD-IT Games"><img src="../assets/mod-it.jpg" alt="MoD-IT" width="600" height="323"><span>POP</span></a>
+    <nav aria-label="Game controls"><button id="controls-button" type="button">Controls</button><button id="settings-button" type="button">Settings</button><button id="mute" type="button" aria-pressed="true">Sound on</button><button id="fullscreen" type="button">Fullscreen</button></nav>
+  </header>
+  <main>
+    <section id="player" class="player" aria-label="DOS game">
+      <canvas id="screen" width="320" height="200" tabindex="0" role="img" aria-label="Game screen. Arrow keys to move, Shift to act. See Controls for all keyboard commands."></canvas>
+      <div id="overlay" class="overlay"><h1 id="overlay-title">POP</h1><p id="overlay-detail">Keyboard required</p><div class="overlay-actions"><button id="start" class="primary" type="button">Start</button><button id="continue" type="button" hidden>Continue</button><button id="resume" class="primary" type="button" hidden>Resume</button></div></div>
+    </section>
+    <div class="toolbar"><button id="pause" type="button" disabled>Pause</button><button id="save" type="button" disabled>Save checkpoint</button><button id="load" type="button" disabled>Load checkpoint</button><button id="restart" type="button" disabled>Restart game</button></div>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <p class="hint">← → Move · ↑ Jump / climb / parry · ↓ Crouch / climb down · Shift Act / grab / strike</p>
+  </main>
+  <div id="boot" class="boot">Loading…</div>
+  <dialog id="controls-dialog" aria-labelledby="controls-title"><h2 id="controls-title">Controls</h2>
+    <dl><dt>← / →</dt><dd>Move, turn, advance or retreat in combat</dd><dt>↑</dt><dd>Jump, climb up, or parry in combat</dd><dt>↓</dt><dd>Crouch, climb down, or put away the sword</dd><dt>Shift</dt><dd>Walk carefully, grab an edge, pick up a sword, drink a potion or strike</dd><dt>Shift + ← / →</dt><dd>Careful steps</dd><dt>← / → then ↑</dt><dd>Running jump; hold Shift to catch an edge</dd><dt>Space</dt><dd>Show remaining time</dd><dt>Enter</dt><dd>Continue after death</dd><dt>Esc</dt><dd>Original in-game pause</dd><dt>Ctrl + A</dt><dd>Restart the current level</dd><dt>Ctrl + R</dt><dd>Restart the game</dd><dt>Ctrl + G / Ctrl + L</dt><dd>Save / load the original checkpoint</dd><dt>Ctrl + S</dt><dd>Toggle original game sound</dd></dl>
+    <p>The original game saves on levels 3–13. A checkpoint restores the beginning of the saved level, remaining time and health. It is kept on this device. Ctrl+L works at the original title screen. The Load checkpoint button restarts the game and loads your checkpoint automatically.</p>
+    <p>Click the game screen to return keyboard focus. Switching tabs pauses the game; choose Resume when you return.</p>
+    <button type="button" class="primary" data-close>Close</button>
+  </dialog>
+  <dialog id="settings-dialog" aria-labelledby="settings-title"><h2 id="settings-title">Settings</h2><label for="sound-device">Sound device</label><select id="sound-device"><option value="adlib">AdLib</option><option value="speaker">PC Speaker</option></select><p>Changing the sound device takes effect when you restart the game.</p><p>All game files, the emulator and checkpoints stay in this browser. No account is needed.</p><button type="button" class="primary" data-close>Close</button></dialog>
+  <dialog id="restart-dialog" aria-labelledby="restart-title"><h2 id="restart-title">Restart the game?</h2><p>Your saved checkpoint will be kept.</p><div class="dialog-actions"><button id="confirm-restart" class="primary" type="button">Restart</button><button type="button" data-close>Cancel</button></div></dialog>
+  <footer><a href="../">All games</a><a href="../privacy.html">Privacy</a><a href="./CREDITS.md">Credits</a><a href="./vendor/COPYING.txt">Emulator license</a></footer>
+  <noscript><p class="boot">Enable JavaScript to play.</p></noscript>
+  <script type="module">
+    try {
+      if(!HTMLScriptElement.supports?.('importmap'))throw new Error('Please update your browser.');
+      const response=await fetch(`./config.json?check=${Date.now().toString(36)}`,{cache:'no-store',signal:AbortSignal.timeout(10000)});
+      if(!response.ok)throw new Error('Configuration unavailable.');
+      const config=await response.json();
+      if(!/^[a-z0-9]{3,16}$/i.test(config.version)||!Array.isArray(config.modules)||!config.modules.includes('./app.mjs'))throw new Error('Invalid configuration.');
+      const query=`?v=${encodeURIComponent(config.version)}`,imports={};
+      for(const path of config.modules){if(!/^\.\/[a-z0-9-]+\.mjs$/i.test(path))throw new Error('Invalid module path.');const url=new URL(path,location.href).href;imports[url]=url+query;}
+      const map=document.createElement('script');map.type='importmap';map.textContent=JSON.stringify({imports});document.head.append(map);
+      const style=document.createElement('link');style.rel='stylesheet';style.href='./style.css'+query;
+      const styled=new Promise((resolve,reject)=>{style.onload=resolve;style.onerror=()=>reject(new Error('Styles unavailable.'));});document.head.append(style);await styled;
+      await import(imports[new URL('./app.mjs',location.href).href]);document.querySelector('#boot').hidden=true;
+    }catch(error){console.error(error);const boot=document.querySelector('#boot');boot.replaceChildren();const text=document.createElement('p');text.textContent=`Unable to load POP. ${error.message}`;const retry=document.createElement('button');retry.textContent='Reload';retry.onclick=()=>location.reload();boot.append(text,retry);document.querySelector('#overlay').hidden=true;}
+  </script>
+</body>
+</html>

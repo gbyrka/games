@@ -4,6 +4,11 @@ The English-language landing page for the MoD-IT browser game collection. The co
 
 ## Preview
 
+The unlisted DOS game entry is available at `/games/pop/` after deploying this
+repository. It is not linked from the catalog. See [pop/README.md](pop/README.md)
+for the original DOS files, locally hosted emulator, controls, checkpoints and
+verification. It owns its own release configuration and requires no build.
+
 Serve the parent folder containing `games`, `multiplayer`, `dock`, `park`, `hamster`, and `sokoban`:
 
 ```sh
