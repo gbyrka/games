@@ -1,0 +1,576 @@
+{
+  "game": "SimCity 2000 for MS-DOS",
+  "version": "1.01 (1994 UK CD-ROM)",
+  "source": {
+    "url": "https://archive.org/download/sc2kcd_en/sc2kcd_en.iso",
+    "bytes": 3727360,
+    "sha256": "08c287767a0030ed2e3906333ba8fe943d6cd18f991729bd5eaafd7264bd194e"
+  },
+  "installation": "Original INSTALL.EXE: VESA Super VGA, Sound Blaster 16 music and effects, default SimMayor / SimBusiness. No binary modifications.",
+  "emulator": "emulators 8.5.3 / DOSBox",
+  "bundle": {
+    "file": "simcity2000-dos.zip",
+    "bytes": 2995341,
+    "sha256": "9bafe4cc3168dd8388e4ad32e4d8219404410448273dba6acb30c399f1653a6a"
+  },
+  "files": {
+    "SC2000/BOOTDISK.EXE": {
+      "bytes": 48398,
+      "sha256": "c386ac17cc87f221dcc2a0dddeffda45c335e148fc331cf8c3c384c000d4cfe5"
+    },
+    "SC2000/GM1.BNK": {
+      "bytes": 23907,
+      "sha256": "843f012e7980e0a58722aa5c7a6e88b652f2f8d404834638cd994ca0869df5a8"
+    },
+    "SC2000/GM2.BNK": {
+      "bytes": 24273,
+      "sha256": "b4af656059a6afba5db2da972c3506ca08d899ca04c65389e0bec7aaf6536339"
+    },
+    "SC2000/HAPPYLND.SC2": {
+      "bytes": 70737,
+      "sha256": "1df656cf8384d36ad8f99d0d4d19356cd58ab2158e9c258cd0783c834e36a9a8"
+    },
+    "SC2000/INFO.EXE": {
+      "bytes": 27025,
+      "sha256": "fde21404f345808926edc3ee4e47152df3c81cd6692c9e449e564f0b1f0269a7"
+    },
+    "SC2000/INSTALL.EXE": {
+      "bytes": 96280,
+      "sha256": "25b05fb50b517ea48099cc73e9cb22c687dfc8cdd7cf6a97a15dfe8341bcffd1"
+    },
+    "SC2000/INSTALL.MXS": {
+      "bytes": 10883,
+      "sha256": "249659f8f705c0260c2150810b672406eeb062486875763a19455ba26e657f59"
+    },
+    "SC2000/LAKELAND.SC2": {
+      "bytes": 75857,
+      "sha256": "eafc06541937bf9ee503005b8e3dcf273c0d837f0592258379fc64b6ea52e651"
+    },
+    "SC2000/MAXIS.CIM": {
+      "bytes": 67557,
+      "sha256": "71db4a2c4c0931698dda408215d90fa13239b6284054ec6ca6300744c287c152"
+    },
+    "SC2000/MAXISLND.SC2": {
+      "bytes": 53821,
+      "sha256": "3bee886b2da684b6ca200e8465f27be648dd306a05dc34a86f457c4082ea443f"
+    },
+    "SC2000/MW_ATIUP.EXE": {
+      "bytes": 5496,
+      "sha256": "c6a543157f87e0fae840ef046fda47b7801c3deb029bdec58b11cc0922e05376"
+    },
+    "SC2000/POSTCARD.CIM": {
+      "bytes": 15341,
+      "sha256": "7a60721f815124bb28f2f190c42f70dcd976de559529da4ebebca9f34ccceed4"
+    },
+    "SC2000/README.TXT": {
+      "bytes": 21453,
+      "sha256": "8f33d75e73a3ee304065a9bba8f18951df9bfb272805df1c6ca1a5bd0a626701"
+    },
+    "SC2000/SC2000.CFG": {
+      "bytes": 353,
+      "sha256": "e27e024615086773a067b51638cefc9397e2faa0deb4305b0704ccd25809a196"
+    },
+    "SC2000/SC2000.DAT": {
+      "bytes": 2629981,
+      "sha256": "beccf5f4210ce515793edbf51bd6114e3b514b10ff2ed39b4fd2f773b456eef3"
+    },
+    "SC2000/SC2000.EXE": {
+      "bytes": 1052000,
+      "sha256": "9107fbabae46a6cc589277b6693e84cda21fa67c556e8f3b62e9775d88374aab"
+    },
+    "SC2000/SCENARIO/ATLANTA.SCN": {
+      "bytes": 132529,
+      "sha256": "7b5360aa129ba442b009f313c672de68cd85d5af1028ba24112886092b8362bb"
+    },
+    "SC2000/SCENARIO/CHARLEST.SCN": {
+      "bytes": 91003,
+      "sha256": "5e0a2a240fe09c717076aac9e8ea33f70fc8770c3213bd75879afd70e9aa3345"
+    },
+    "SC2000/SCENARIO/CHICAGO.SCN": {
+      "bytes": 117015,
+      "sha256": "eb739217397ded2347bc4fbcc0be551df792a5ea551b7b7432dd3429148aa1fe"
+    },
+    "SC2000/SCENARIO/DAVENPOR.SCN": {
+      "bytes": 113404,
+      "sha256": "a545e0ed789df221837c7eb334177ab285c186e17b5a4a388fcf24c1ceab8fb5"
+    },
+    "SC2000/SCENARIO/DULLSVIL.SCN": {
+      "bytes": 66520,
+      "sha256": "2ee0f118ad0f3ee60a6cb1dcc86819baac38f428d8dba8c25bf043ae6efe7acb"
+    },
+    "SC2000/SCENARIO/FLINT.SCN": {
+      "bytes": 122758,
+      "sha256": "3a9f034898de0570f9229fd52030afa866f172304fc519254e522b8fcd3c656d"
+    },
+    "SC2000/SCENARIO/HOLLYWOO.SCN": {
+      "bytes": 119270,
+      "sha256": "9d68c18620dd75e624248ecfcc5049ed44a026a1ff2aabcbcfa7c3f8b5eacd46"
+    },
+    "SC2000/SCENARIO/HOMESTEA.SCN": {
+      "bytes": 104585,
+      "sha256": "afc22cba7be24ddff9eb828c4a05624fb51cd24765cb1708a3348c2d8d46b28b"
+    },
+    "SC2000/SCENARIO/MALIBU.SCN": {
+      "bytes": 81825,
+      "sha256": "cf126adde51368e70a8b18b4d578a6ba6ae063793e634ad0248ce4d139ca1b05"
+    },
+    "SC2000/SCENARIO/MANHATTA.SCN": {
+      "bytes": 110994,
+      "sha256": "7a2d71103e9e7bc1343797c8e38ea62835e5b003405359287a7ed5dc6b804e33"
+    },
+    "SC2000/SCENARIO/OAKLAND.SCN": {
+      "bytes": 112508,
+      "sha256": "75664666ab97f1c754dd416287e133dba0219adb1c4dbccc50f82d10b6c94e33"
+    },
+    "SC2000/SCENARIO/PORTLAND.SCN": {
+      "bytes": 124781,
+      "sha256": "fc381cffad5406012bb22969cc74de477d218ad0fafa6e25d4c926aca3f9b575"
+    },
+    "SC2000/SCENARIO/SANFRANC.SCN": {
+      "bytes": 97989,
+      "sha256": "e65f96816c35ca9dd449b0b5be27be0261e6ee23f6351c0b544ba7ea2b9e4de7"
+    },
+    "SC2000/SCENARIO/SILICONV.SCN": {
+      "bytes": 123991,
+      "sha256": "07899d11a514c74e4bda89307e8570b9133c21aad6c9d0d1db8028819b2cb9d9"
+    },
+    "SC2000/SCENARIO/WASHINGT.SCN": {
+      "bytes": 118084,
+      "sha256": "b391d6b6ddccef916449192aed7cc3cb6ee54cd927823df3802baefc3b4144dc"
+    },
+    "SC2000/SOUND/A32ADLIB.DLL": {
+      "bytes": 19968,
+      "sha256": "ebe6f518c485a0a7b4b1db8fa9ca81de96d13afbcf62bff4401e27de99a67175"
+    },
+    "SC2000/SOUND/A32ALGDG.DLL": {
+      "bytes": 9085,
+      "sha256": "35bafdafd9db970ecbe170bc47ed16b8265ebacdd13f4e911aeb1744d2db7f4d"
+    },
+    "SC2000/SOUND/A32ALGFM.DLL": {
+      "bytes": 24576,
+      "sha256": "1c02519f6d1f1d7a51ecfdc669fb1f34986d2f2c5c6860f701ddd246c4b436e4"
+    },
+    "SC2000/SOUND/A32ARDG.DLL": {
+      "bytes": 16384,
+      "sha256": "6b0dcd7ea52e891d23f9f8b3af56e3774092d3e5a6a0dbcc1d4046ba39ae111b"
+    },
+    "SC2000/SOUND/A32ARXM.DLL": {
+      "bytes": 53760,
+      "sha256": "5fa2815cb37d35e59c68801d1382c2bf6c8549d2b1cf25658c701434e1f4c25f"
+    },
+    "SC2000/SOUND/A32MT32.DLL": {
+      "bytes": 14336,
+      "sha256": "89427cb322902c8276f7508aace430cf419bc30b685c9441178eb11e46d9f36d"
+    },
+    "SC2000/SOUND/A32MT32S.DLL": {
+      "bytes": 14848,
+      "sha256": "22f0face8f250aff1009735437343bdccd2fc3b7fbe7834f9adfbe4bf0d59307"
+    },
+    "SC2000/SOUND/A32PASDG.DLL": {
+      "bytes": 8440,
+      "sha256": "40f85f6c0fd8fbd200f5aee7f7f281bf3be1f13ebdb3ef013282f5fb542d4c4f"
+    },
+    "SC2000/SOUND/A32PASFM.DLL": {
+      "bytes": 19968,
+      "sha256": "66fd8636f06651802fe4ce0ed731af289cec531afc1d0ff7189f8b732b0b33c3"
+    },
+    "SC2000/SOUND/A32PASOP.DLL": {
+      "bytes": 24576,
+      "sha256": "a53c12819718f035dc4f3307d02981fd63637826da31708904ea427ef81f4699"
+    },
+    "SC2000/SOUND/A32SBDG.DLL": {
+      "bytes": 8464,
+      "sha256": "99acf41846f02fac929d4282a1650e6d1aeff4647b3624d89055589f0ac4d4c9"
+    },
+    "SC2000/SOUND/A32SBFM.DLL": {
+      "bytes": 19968,
+      "sha256": "9aa7ae747221de3060d3f7e6ea9d4cf94ae0288f6696108e20aaf11bb5d113a6"
+    },
+    "SC2000/SOUND/A32SBPDG.DLL": {
+      "bytes": 8790,
+      "sha256": "b70e7d70e670ff0de8c6b5c64c53c7192efa88f28ea247167338cf08bed25b81"
+    },
+    "SC2000/SOUND/A32SP1FM.DLL": {
+      "bytes": 19968,
+      "sha256": "351c6952956821d71da2188455ea3a1c45a21e25cd4cfcfa6bcbb7bf3638c016"
+    },
+    "SC2000/SOUND/A32SP2FM.DLL": {
+      "bytes": 24576,
+      "sha256": "6cf5b12254350ab6f694a056d5e4e2e9f9226907757cf3529778b577b4911eda"
+    },
+    "SC2000/SOUND/A32SPKR.DLL": {
+      "bytes": 14848,
+      "sha256": "f0ba75289e80b7f1283ef17d890f5b1cbe2f3ecb617b5a0e487f9a2a347cc8de"
+    },
+    "SC2000/VDETECT.EXE": {
+      "bytes": 28967,
+      "sha256": "ca3f60d1c688a8793c49901441989216c5a74926bed680427252d8d3b49fef97"
+    },
+    "SC2000/VESA/AHEAD/VESA.EXE": {
+      "bytes": 2402,
+      "sha256": "f6aef96ceb6179577c978c1a8b69f099e3af549d25c3448e2c630c269095867c"
+    },
+    "SC2000/VESA/APPIAN/APVESA.EXE": {
+      "bytes": 2580,
+      "sha256": "a806bf82d14c66f1088bf493d62e427ee34a65360b21ff95c6b768b7c74370d0"
+    },
+    "SC2000/VESA/ATI/MW_ATIUP.EXE": {
+      "bytes": 5496,
+      "sha256": "c6a543157f87e0fae840ef046fda47b7801c3deb029bdec58b11cc0922e05376"
+    },
+    "SC2000/VESA/ATI/READ.ME": {
+      "bytes": 40,
+      "sha256": "ae6456d9449aefebc9b9848f47b3e698058da198406485091420e0c5d73c17fc"
+    },
+    "SC2000/VESA/ATI/VVESA1.COM": {
+      "bytes": 3736,
+      "sha256": "ec523f3d5e5a3cbc9d12a39c962bc0e00be9e6c2ef60617e17bc640ca7bb202e"
+    },
+    "SC2000/VESA/ATI/VVESA2.COM": {
+      "bytes": 12654,
+      "sha256": "2cf48e66c4f19989a3fd6282a465beec4c0e4a07284a514a02b488ea1692062a"
+    },
+    "SC2000/VESA/BOCA/TLIVESA.COM": {
+      "bytes": 4590,
+      "sha256": "e7c21762890913efa8bc7cd0725238038d8126b007a43b8a4ef7f3f4c9cc001b"
+    },
+    "SC2000/VESA/CIRRUS/CLVESA.COM": {
+      "bytes": 2663,
+      "sha256": "3fb3d555a43a9844b364eb8f5868cddae4e9e9148b4cfafaac858409d9f04a38"
+    },
+    "SC2000/VESA/CIRRUS/CRUSVESA.COM": {
+      "bytes": 3711,
+      "sha256": "393a55745afdf09b27cb0c5623f387adfa00a6e59f53231a071851641d403aa4"
+    },
+    "SC2000/VESA/CIRRUS/README.DOC": {
+      "bytes": 182,
+      "sha256": "97203e38dc8eb47f4abe4e116ee7283026aa621eccc33d71e78a9ca2d11e5669"
+    },
+    "SC2000/VESA/COMPAQ/CPQVESA.EXE": {
+      "bytes": 60314,
+      "sha256": "667627874af46cad245cc5ad3c8deebd6ad7259953218aee1f3c9f0fdce76f5b"
+    },
+    "SC2000/VESA/COMPAQ/README.VSA": {
+      "bytes": 10798,
+      "sha256": "d311a8bf7416ed5319ed039db1df77663a5c69564bb0bcca633305fdc70a63c3"
+    },
+    "SC2000/VESA/C_AND_T/README.TXT": {
+      "bytes": 62,
+      "sha256": "a7c4212e6d7395710cc17eaf43b48e0e70e825556b5e3bbfd055f9209ff08b4f"
+    },
+    "SC2000/VESA/C_AND_T/VESA450.COM": {
+      "bytes": 3313,
+      "sha256": "6b13a01004d1efd1b7964effa402d046a95f9a0f134fbe1f791662dabc6f8613"
+    },
+    "SC2000/VESA/C_AND_T/VESA451.COM": {
+      "bytes": 1394,
+      "sha256": "40d3e0ed6edca48dffab28ba88d97036db93d1043ff688cc5861b29263fa7dbc"
+    },
+    "SC2000/VESA/C_AND_T/VESA452.COM": {
+      "bytes": 1725,
+      "sha256": "e5e0e239da325d61d0e964eec35485a14813241eb46154193b72c351d15e6f4f"
+    },
+    "SC2000/VESA/DIAMOND/24XVESA.EXE": {
+      "bytes": 3328,
+      "sha256": "17b059a705abba1162230d8b8dd74fc1fd658bffe1bfb39dbc7b79d78784632c"
+    },
+    "SC2000/VESA/DIAMOND/TLIVESA.COM": {
+      "bytes": 3389,
+      "sha256": "262b5d741efa4ee844004baf94c099578fa40d8b3af1c51487a82db8bed495a8"
+    },
+    "SC2000/VESA/DIAMOND/VESA.EXE": {
+      "bytes": 3234,
+      "sha256": "713cc75964ac2df7122a350a32548d9beea2fc52a0ffb648a97f30543810a21c"
+    },
+    "SC2000/VESA/DIAMOND/VMODE.COM": {
+      "bytes": 23002,
+      "sha256": "e1b905a32bc1029287e804873720bc169f843308ca8f963c40a698917414545b"
+    },
+    "SC2000/VESA/EVEREX/EVRXVESA.COM": {
+      "bytes": 4228,
+      "sha256": "4a8b6a2674a2595cebbaee48b21ec4abb632c96f751e6c44ec2526fbe9213857"
+    },
+    "SC2000/VESA/EVEREX/VESA.COM": {
+      "bytes": 4207,
+      "sha256": "51a6c601f37c6aecd3bf7ae0f0db3351ac2112ebd8f8b0172f52306d17ddc4be"
+    },
+    "SC2000/VESA/GENOA/6VESA11D.COM": {
+      "bytes": 2873,
+      "sha256": "daa2f61d3e2d2334b6b19afd815a7cfc10d5535e5359ff7548824b20e575e4ad"
+    },
+    "SC2000/VESA/GENOA/GENBOX.EXE": {
+      "bytes": 9712,
+      "sha256": "132d4483c08b38f625586a32fb3a2002aef2de66791cd1e954a42e987d2fae90"
+    },
+    "SC2000/VESA/GENOA/GENBOX.PAS": {
+      "bytes": 15518,
+      "sha256": "bb27e1d7be22883fad95618aa91293877e65b10bed97f113c0ab76ad747d3b96"
+    },
+    "SC2000/VESA/GENOA/READ.ME": {
+      "bytes": 382,
+      "sha256": "62a8595fab00a160744c57a810bda7b42711f38c14a5f178ec6a43865cf83948"
+    },
+    "SC2000/VESA/GENOA/VESA.COM": {
+      "bytes": 2857,
+      "sha256": "5a219ef745ec4e404dc29bf04a4d015b8b58f8c5a6793815f05b2fc82e61c999"
+    },
+    "SC2000/VESA/GENOA/VESABOX.EXE": {
+      "bytes": 9536,
+      "sha256": "f50d7d79fb0e700b4c0567143eba7c34e36ed25498225a13d9b3d6610eb582a0"
+    },
+    "SC2000/VESA/GENOA/VESABOX.PAS": {
+      "bytes": 15798,
+      "sha256": "176572b7255822ead34727dd8665bae8805b24efad1f9069b62146ceab1f26d0"
+    },
+    "SC2000/VESA/GENOA/VESAMODE.EXE": {
+      "bytes": 7856,
+      "sha256": "49b89cc5b1135270da9096db2ba20dc7bbda77a10e343eb4b9a5dd991ae348a7"
+    },
+    "SC2000/VESA/HEADLAND/HT-VESA.EXE": {
+      "bytes": 18004,
+      "sha256": "ad4ae117ef9a7393caa3159dfb4b899f8272cafead0c4e77d1762e8f5fa665c0"
+    },
+    "SC2000/VESA/HEADLAND/HTVESA.COM": {
+      "bytes": 3820,
+      "sha256": "7ce444500e3adec833a91fae66fb4ebc12b3ec8df82cb9552bbdc4b2fb8b689b"
+    },
+    "SC2000/VESA/HERCULES/HGCVESA.COM": {
+      "bytes": 8429,
+      "sha256": "cbb7c6241c2644a77a1a347b20277d65bed91498dfcaf08a6dc2638e0367d944"
+    },
+    "SC2000/VESA/HERCULES/HGVVESA.COM": {
+      "bytes": 8690,
+      "sha256": "9faffb09738f2987a4e6de13b4a1f50189567b072dd66b42cc146ef90788e16f"
+    },
+    "SC2000/VESA/IBM/VESA.EXE": {
+      "bytes": 3936,
+      "sha256": "ecb516f214f8aaf333629eec9efddd1a0767ff79a6a5cf4aa5ae8955397e96f9"
+    },
+    "SC2000/VESA/IBM/XGAVESA.EXE": {
+      "bytes": 7184,
+      "sha256": "338ee45ef3121c7b2634bd24fc22c8756190be380fb478346dc3b7aac4d8da65"
+    },
+    "SC2000/VESA/IRIS/TLIVESA.COM": {
+      "bytes": 4590,
+      "sha256": "e7c21762890913efa8bc7cd0725238038d8126b007a43b8a4ef7f3f4c9cc001b"
+    },
+    "SC2000/VESA/OAK/67VESA.COM": {
+      "bytes": 1559,
+      "sha256": "2d26fdd12d214eae40749a029e0805761342a9dda5c6758ab930f2420a0b3d8c"
+    },
+    "SC2000/VESA/OAK/OAK-37.COM": {
+      "bytes": 1351,
+      "sha256": "92f9196b4812a8251eeb715b9c572f2173d7c792e26c8d06496b5d4170438647"
+    },
+    "SC2000/VESA/OAK/OAK-77.COM": {
+      "bytes": 1530,
+      "sha256": "ad772c535b2a71a7aa97e1db584c272f6bc431f6ee132bc306a9739c9c08536a"
+    },
+    "SC2000/VESA/OAK/OTIVBE.COM": {
+      "bytes": 2066,
+      "sha256": "71b41f14b612625cef233cfeda473c3c905560fcf2fc920338ca281c70adf895"
+    },
+    "SC2000/VESA/OAK/OTIVESA.COM": {
+      "bytes": 1530,
+      "sha256": "ad772c535b2a71a7aa97e1db584c272f6bc431f6ee132bc306a9739c9c08536a"
+    },
+    "SC2000/VESA/OAK/README.DOC": {
+      "bytes": 611,
+      "sha256": "a055cdae338c90a6f08c82a03f656c4f4073436f95c46866a20dce8bbbcd8824"
+    },
+    "SC2000/VESA/ORCHID/CVLBVESA.COM": {
+      "bytes": 6227,
+      "sha256": "36686dae3be84d1aed7671978b30cb4f3251c06e9ecfaff2acfe4c1287ec5eca"
+    },
+    "SC2000/VESA/ORCHID/FPATCH.COM": {
+      "bytes": 896,
+      "sha256": "da0c2f0c74b28e53e8bbfd893130c263593dee46417a38dc520b522ccb95bbc6"
+    },
+    "SC2000/VESA/ORCHID/ORCHDVSA.COM": {
+      "bytes": 2021,
+      "sha256": "ae195ff30d7965e4d8c90356d084bce6ca0691b3c731e9df605370e8f330f73d"
+    },
+    "SC2000/VESA/ORCHID/READ.ME": {
+      "bytes": 184,
+      "sha256": "ee398046ca428c03c94d40305a74d606dd9ec90f8487c8cfd00ad094dc93296d"
+    },
+    "SC2000/VESA/PARADISE/PARADISE.EXE": {
+      "bytes": 1942,
+      "sha256": "b1011990a40964222fbb54ed03766a0efa63e142a37411bf16aaa44cc88bfce9"
+    },
+    "SC2000/VESA/PARADISE/READ.ME": {
+      "bytes": 190,
+      "sha256": "59dbd0e28e8d1936e0f19f390df9b042a518bfafbd5ed01c343ccd568885c021"
+    },
+    "SC2000/VESA/PARADISE/VESA.EXE": {
+      "bytes": 1447,
+      "sha256": "d875d41f32f26786ece4ebc7db5cb8f7ced680797fc63fcb64614ee45e8cc9d4"
+    },
+    "SC2000/VESA/PARADISE/VESA1A1B.EXE": {
+      "bytes": 2960,
+      "sha256": "c0e3a61a1084a1efe885e0b743a6deb985159326847660e276987f17fedce90a"
+    },
+    "SC2000/VESA/PARADISE/VESA1C.EXE": {
+      "bytes": 3072,
+      "sha256": "0eb9d6f80382105b526e3e46d06406bcfc4b77122cfd946ba937dc17edc46d64"
+    },
+    "SC2000/VESA/PARADISE/VESA1D.EXE": {
+      "bytes": 3234,
+      "sha256": "713cc75964ac2df7122a350a32548d9beea2fc52a0ffb648a97f30543810a21c"
+    },
+    "SC2000/VESA/PARADISE/VESAX.EXE": {
+      "bytes": 1942,
+      "sha256": "b1011990a40964222fbb54ed03766a0efa63e142a37411bf16aaa44cc88bfce9"
+    },
+    "SC2000/VESA/PERFECTV/PV-VESA.COM": {
+      "bytes": 2752,
+      "sha256": "d2e895a373f59aa89959219af05670c242f2b7adcad91c146435296941ecf58a"
+    },
+    "SC2000/VESA/SIGMA/GXVES.COM": {
+      "bytes": 4043,
+      "sha256": "b40b6ffba15433e45228fed2344cff7f22a1df1daa6c279ced306256b0b61a3e"
+    },
+    "SC2000/VESA/SIGMA/SIGVESA1.COM": {
+      "bytes": 1537,
+      "sha256": "26f0c3a5e00b84fd573b0b15a1a49fb994336b1ab4dee2c82db7181ab63aaeee"
+    },
+    "SC2000/VESA/SIGMA/SIGVESA2.COM": {
+      "bytes": 1537,
+      "sha256": "18dd0fbad294661c6ad8ae646897e9d8ebd78b0a4334ea9ff0ab2edbc3a480a9"
+    },
+    "SC2000/VESA/SPIDER/BWVESA.COM": {
+      "bytes": 6538,
+      "sha256": "cc65cfae8002cd377a9ad53b47754f1d31f6cde808cc3809fa041e53a12844cf"
+    },
+    "SC2000/VESA/SPIDER/SETMODE.EXE": {
+      "bytes": 131485,
+      "sha256": "faa9791c1300e17e396631558e32fc559b400d8212d24db15bad70d84322020b"
+    },
+    "SC2000/VESA/SPIDER/SPBIOS.EXE": {
+      "bytes": 33476,
+      "sha256": "427da7fcc843703db1feca95347403b37df1bc010db3d40037cd288b3202b3ee"
+    },
+    "SC2000/VESA/STB/READ.ME": {
+      "bytes": 147,
+      "sha256": "27b2b032b8a19bac63415e406e575c0bb72fc839aecd34a9181bbf1b0d82e883"
+    },
+    "SC2000/VESA/STB/STB-VESA.COM": {
+      "bytes": 2816,
+      "sha256": "aefe9b6faadc62be7d0e13e6d07daacba8b610be6330f9fcf5c111727291bd7a"
+    },
+    "SC2000/VESA/STB/STB_VESA.COM": {
+      "bytes": 2721,
+      "sha256": "645c68b593fb2d0311c9a44236a5645c379a956c052e132896a739532cf50af7"
+    },
+    "SC2000/VESA/STB/VESA-TSR.COM": {
+      "bytes": 2781,
+      "sha256": "28e6346e3e6c1dc9438ae94d8c3316cb3e8d73b4c7e426b6392d2d3fea0b1a6b"
+    },
+    "SC2000/VESA/STB/VESA450.COM": {
+      "bytes": 3313,
+      "sha256": "6b13a01004d1efd1b7964effa402d046a95f9a0f134fbe1f791662dabc6f8613"
+    },
+    "SC2000/VESA/TECMAR/VESATEST.EXE": {
+      "bytes": 9433,
+      "sha256": "89867089642cb8bd7f7a31071dd245996819acf0783940495b606ec8b651a7f2"
+    },
+    "SC2000/VESA/TECMAR/VGAVESA.COM": {
+      "bytes": 2388,
+      "sha256": "976ef2ab449dd0d3c1b0398891c4a6e84d03907663fe8c8ac5a6ed279eed1447"
+    },
+    "SC2000/VESA/TI_PORT/CLVESA.COM": {
+      "bytes": 2663,
+      "sha256": "3fb3d555a43a9844b364eb8f5868cddae4e9e9148b4cfafaac858409d9f04a38"
+    },
+    "SC2000/VESA/TI_PORT/EXTMODES.COM": {
+      "bytes": 2410,
+      "sha256": "b1a36eef4587eb8b07a1afb5857ae1a87317cfa31eadee704029a8ae0273f418"
+    },
+    "SC2000/VESA/TRIDENT/READ.ME": {
+      "bytes": 85,
+      "sha256": "f8de7434a4bcc49792c8f748a598e15a2e43506bf53faaf61077eb3b54d915ba"
+    },
+    "SC2000/VESA/TRIDENT/VESA.EXE": {
+      "bytes": 12717,
+      "sha256": "19a3e33f9b283436ccca0c05c49631f19d6811a4e62f3d6b5f084ecaa21880c9"
+    },
+    "SC2000/VESA/TSENG/TLIVESA.COM": {
+      "bytes": 3389,
+      "sha256": "262b5d741efa4ee844004baf94c099578fa40d8b3af1c51487a82db8bed495a8"
+    },
+    "SC2000/VESA/TSENG/TLIVESA.DOC": {
+      "bytes": 1005,
+      "sha256": "4d977d6cbc72409a944e4a83544a7b926704d6220ac2d3617feedf8f32f7bc03"
+    },
+    "SC2000/VESA/TSENG/TLIVESA1.COM": {
+      "bytes": 5024,
+      "sha256": "e43d11696a0878b9590a61120ef4d0dfbb3c220cf70eeb60cdf3f1d7854a60ab"
+    },
+    "SC2000/VESA/UNIVESA/COPYRIGH": {
+      "bytes": 1027,
+      "sha256": "4b8d84ecff54876b94cb6c0f3da45343204cdc1b456e29bb93d21d75548c57c3"
+    },
+    "SC2000/VESA/UNIVESA/UNIVESA.DOC": {
+      "bytes": 6263,
+      "sha256": "e141b83a36d06c3f6adafe3310a4267607454d3920d697de89daeff7179289ca"
+    },
+    "SC2000/VESA/UNIVESA/UNIVESA.EXE": {
+      "bytes": 34032,
+      "sha256": "c0e15539ce5f679c5f64ec59e81f5ea4b7876fb613f45ee4844dda14d6e8be43"
+    },
+    "SC2000/VESA/VIDEO7/V7VESA.COM": {
+      "bytes": 2346,
+      "sha256": "e0c32584d7e85c5e0196a28b5123438f74d871c8e7c89542c821fa8872f7f17f"
+    },
+    "SC2000/VESA/VIDEO7/V7WVGA.COM": {
+      "bytes": 3493,
+      "sha256": "9047a67ad6c712b2871073ddfd489f9a45cb3240b2d411ff98d56390c5aff54d"
+    },
+    "SC2000/VESA/WESTERN/VESA1A1B.EXE": {
+      "bytes": 2960,
+      "sha256": "c0e3a61a1084a1efe885e0b743a6deb985159326847660e276987f17fedce90a"
+    },
+    "SC2000/VESA/WESTERN/VESA1C.EXE": {
+      "bytes": 3072,
+      "sha256": "0eb9d6f80382105b526e3e46d06406bcfc4b77122cfd946ba937dc17edc46d64"
+    },
+    "SC2000/VESA/WESTERN/VESA1D.EXE": {
+      "bytes": 3234,
+      "sha256": "713cc75964ac2df7122a350a32548d9beea2fc52a0ffb648a97f30543810a21c"
+    },
+    "SC2000/VESA/WESTERN/VESAX.EXE": {
+      "bytes": 1942,
+      "sha256": "b1011990a40964222fbb54ed03766a0efa63e142a37411bf16aaa44cc88bfce9"
+    },
+    "SC2000/VOLCANO.SC2": {
+      "bytes": 67397,
+      "sha256": "058946b8d1588a41f58fa9e192262f773e1a0747d01651d29d93e2b0cc248653"
+    },
+    "SC2000/VRF_DLL.EXE": {
+      "bytes": 186022,
+      "sha256": "36020c2887e019a5345e6dc73221f500c2e6cd841fd3a98e708cd8c71296c449"
+    }
+  },
+  "runtime": {
+    "COPYING.txt": {
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    "emulators.js": {
+      "bytes": 91065,
+      "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075"
+    },
+    "emulators.js.map": {
+      "bytes": 292415,
+      "sha256": "fc7b1af91c9d4af2f9a75c51bd74469b21d673c1667666c181cbca0e48efe1e8"
+    },
+    "wdosbox.js": {
+      "bytes": 114763,
+      "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e"
+    },
+    "wdosbox.wasm": {
+      "bytes": 1459535,
+      "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c"
+    }
+  }
+}

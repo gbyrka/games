@@ -9,6 +9,10 @@ repository. It is not linked from the catalog. See [pop/README.md](pop/README.md
 for the original DOS files, locally hosted emulator, controls, checkpoints and
 verification. It owns its own release configuration and requires no build.
 
+SimCity 2000 is also available by direct link at `/games/simcity2000/`, without
+a catalog entry. It runs the full original DOS 1.01 CD edition and supports
+portable `.SC2` city files. See [simcity2000/README.md](simcity2000/README.md).
+
 Serve the parent folder containing `games`, `multiplayer`, `dock`, `park`, `hamster`, and `sokoban`:
 
 ```sh

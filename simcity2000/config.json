@@ -1,0 +1,4 @@
+{
+  "version": "sc2k17nov1",
+  "modules": ["./app.mjs", "./session.mjs", "./settings.mjs", "./storage.mjs", "./cities.mjs"]
+}
