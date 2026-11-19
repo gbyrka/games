@@ -4,171 +4,18 @@
   <meta charset="utf-8">
   <script data-site-https>
     (() => {
-      const { hostname, protocol, pathname, search, hash } = location;
+      const { hostname, search, hash } = location;
       const publicHosts = ['mod-it.games', 'www.mod-it.games', 'gbyrka.github.io'];
-      if (publicHosts.includes(hostname) && (protocol !== 'https:' || hostname !== 'mod-it.games')) {
-        location.replace(`https://mod-it.games${pathname}${search}${hash}`);
-      }
+      const destination = publicHosts.includes(hostname) ? 'https://mod-it.games/' : '/';
+      location.replace(`${destination}${search}${hash}`);
     })();
   </script>
-  <meta name="google-adsense-account" content="ca-pub-3806610967714181">
+  <noscript><meta http-equiv="refresh" content="0;url=/"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111715">
-  <meta name="description" content="Free browser games for multiplayer and solo play. SimCity, Boggle, chess, Catana Codex, Sokoban and more. No registration required.">
+  <link rel="canonical" href="https://mod-it.games/">
   <title>MoD-IT Games</title>
-  <meta property="og:title" content="MoD-IT Games">
-  <meta property="og:description" content="Play Boggle, chess, Catana Codex, TOW: Driver’s Seat and more with friends. Free browser games. No registration required.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mod-it.games/games/">
-  <meta property="og:site_name" content="MoD-IT Games">
-  <meta property="og:image" content="https://mod-it.games/games/assets/multiplayer-cover.jpg">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="800">
-  <meta property="og:image:alt" content="Ivory playing cards and a small strategy board on an emerald table, introducing the multiplayer collection.">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MoD-IT Games">
-  <meta name="twitter:description" content="Free browser games for multiplayer and solo play. No registration or downloads required.">
-  <meta name="twitter:image" content="https://mod-it.games/games/assets/multiplayer-cover.jpg">
-  <link rel="canonical" href="https://mod-it.games/games/">
-  <link id="app-icon" rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
-  <link id="app-style" rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./ads.css?v=adnav1">
-  <script src="./monetization.js?v=adnav1"></script>
-  <script id="adsense-script" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3806610967714181"
-          crossorigin="anonymous" onerror="window.MoDITAds.unavailable()"></script>
 </head>
 <body>
-  <aside id="asset-error" class="asset-error wrap" role="alert" hidden>
-    <span>We couldn't load the latest site files. Please check your connection and reload.</span>
-    <button id="reload-assets" type="button">RELOAD</button>
-  </aside>
-  <a class="skip-link" href="#main">Skip to games</a>
-  <header class="site-header wrap">
-    <a class="brand" href="./" aria-label="MoD-IT Games home"><img src="assets/mod-it.jpg" alt="MoD-IT" width="600" height="323"><span>GAMES</span></a>
-    <nav aria-label="Game categories"><a href="#multiplayer">Multiplayer</a><a href="#keyboard">Keyboard</a><a href="#keyboard-mobile">Keyboard and mobile</a></nav>
-  </header>
-  <main id="main" class="wrap">
-    <div class="catalog-intro"><h1>Browser games</h1><p>Free. No registration. No downloads.</p></div>
-    <section id="multiplayer" class="collection multiplayer" aria-labelledby="multiplayer-title">
-      <div class="section-heading"><h2 id="multiplayer-title">Multiplayer</h2><span class="section-tag">8 games</span></div>
-      <div class="game-grid multiplayer-grid">
-        <a class="game-card catana" href="../multiplayer/games/catana/" aria-labelledby="catana-title catana-cta">
-          <div class="cover"><picture><source type="image/webp" srcset="./assets/catana-cover-600.webp 600w, ./assets/catana-cover-1200.webp 1200w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 900px) 50vw, (max-width: 1364px) 25vw, 300px"><img src="./assets/catana-cover.jpg" alt="A hexagonal island with forests, fields, mountains and colorful wooden settlements surrounded by a teal sea" width="1200" height="800" decoding="async" loading="lazy"></picture></div>
-          <div class="game-copy"><div class="game-title"><h3 id="catana-title">Catana Codex</h3></div><p class="description">Build settlements, trade resources, and develop your island.</p><div class="multiplayer-facts"><span>2–4 players</span><span>45–90 min</span><span>Mouse &amp; touch</span></div><div class="card-bottom"><strong id="catana-cta">Play Catana Codex <span aria-hidden="true">↗</span></strong></div></div>
-        </a>
-        <a class="game-card hamster" href="../multiplayer/games/hamster/" aria-labelledby="hamster-multiplayer-title hamster-multiplayer-cta">
-          <div class="cover"><img src="./assets/hamster-cover.webp" alt="A golden hamster surrounded by wooden hideouts, colorful tunnels and treats" width="1200" height="800" decoding="async" loading="lazy"></div>
-          <div class="game-copy"><div class="game-title"><h3 id="hamster-multiplayer-title">HAMSTER multiplayer</h3></div><p class="description">Explore the habitat with friends and collect the most treats.</p><div class="multiplayer-facts"><span>2–4 players</span><span>3 min</span><span>Keyboard &amp; touch</span></div><div class="card-bottom"><strong id="hamster-multiplayer-cta">Play HAMSTER <span aria-hidden="true">↗</span></strong></div></div>
-        </a>
-        <a class="game-card tow" href="../multiplayer/games/tow/" aria-labelledby="tow-title tow-cta" aria-describedby="tow-keyboard">
-          <div class="cover"><picture><source type="image/webp" srcset="./assets/tow-cover-600.webp 600w, ./assets/tow-cover-1200.webp 1200w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 900px) 50vw, (max-width: 1364px) 25vw, 300px"><img src="./assets/tow-cover.jpg" alt="Four colorful cars towing ivory trailers around a winding forest road" width="1200" height="800" decoding="async"></picture><span id="tow-keyboard" class="keyboard-notice">Keyboard controls only for now</span></div>
-          <div class="game-copy"><div class="game-title"><h3 id="tow-title">TOW</h3></div><p class="description">Race with a trailer, dodge obstacles, and reach the finish.</p><div class="multiplayer-facts"><span>2–4 drivers</span><span>1–3 min</span><span>Keyboard required</span></div><div class="card-bottom"><strong id="tow-cta">Play TOW <span aria-hidden="true">↗</span></strong></div></div>
-        </a>
-        <a class="game-card tow" href="../multiplayer/games/tow-drivers-seat/" aria-labelledby="tow-drivers-seat-title tow-drivers-seat-cta" aria-describedby="tow-drivers-seat-keyboard">
-          <div class="cover"><picture><source type="image/webp" srcset="./assets/tow-drivers-seat-cover-600.webp 600w, ./assets/tow-drivers-seat-cover-1200.webp 1200w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 900px) 50vw, (max-width: 1364px) 25vw, 300px"><img src="./assets/tow-drivers-seat-cover.jpg" alt="A driver’s view of a forest road, rival cars towing ivory trailers and the driver’s own trailer in the left mirror" width="1200" height="800" decoding="async"></picture><span id="tow-drivers-seat-keyboard" class="keyboard-notice">Keyboard controls only for now</span></div>
-          <div class="game-copy"><div class="game-title"><h3 id="tow-drivers-seat-title">TOW: Driver’s Seat</h3></div><p class="description">Take the wheel in first person. Watch your trailer in the mirror and race your friends.</p><div class="multiplayer-facts"><span>2–4 drivers</span><span>1–3 min</span><span>Keyboard required</span></div><div class="card-bottom"><strong id="tow-drivers-seat-cta">Play Driver’s Seat <span aria-hidden="true">↗</span></strong></div></div>
-        </a>
-        <a class="game-card boggle" href="../multiplayer/games/boggle/" aria-labelledby="boggle-title boggle-cta">
-          <div class="cover"><picture><source type="image/webp" srcset="./assets/boggle-cover-600.webp 600w, ./assets/boggle-cover-1200.webp 1200w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 900px) 50vw, (max-width: 1364px) 25vw, 300px"><img src="./assets/boggle-cover.jpg" alt="Sixteen ivory letter cubes in a walnut-framed four-by-four tray on emerald felt" width="1200" height="800" decoding="async" loading="lazy"></picture></div>
-          <div class="game-copy"><div class="game-title"><h3 id="boggle-title">Boggle</h3></div><p class="description">Find words in Polish or English. Play with friends or practice solo.</p><div class="multiplayer-facts"><span>2–6 players or solo</span><span>1–3 min / round</span><span>Keyboard, mouse &amp; touch</span></div><div class="card-bottom"><strong id="boggle-cta">Play Boggle <span aria-hidden="true">↗</span></strong></div></div>
-        </a>
-        <a class="game-card chess" href="../multiplayer/games/chess/" aria-labelledby="chess-title chess-cta">
-          <div class="cover"><picture><source type="image/webp" srcset="./assets/chess-cover-600.webp 600w, ./assets/chess-cover-1200.webp 1200w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 900px) 50vw, (max-width: 1364px) 25vw, 300px"><img src="./assets/chess-cover.jpg" alt="Ivory and dark green chess pieces on a walnut-framed board" width="1200" height="800" decoding="async" loading="lazy"></picture></div>
-          <div class="game-copy"><div class="game-title"><h3 id="chess-title">CHESS</h3></div><p class="description">Classic chess with legal move hints and an optional clock.</p><div class="multiplayer-facts"><span>2 players</span><span>Optional clock</span><span>Mouse &amp; touch</span></div><div class="card-bottom"><strong id="chess-cta">Play CHESS <span aria-hidden="true">↗</span></strong></div></div>
-        </a>
-        <a class="game-card checkers" href="../multiplayer/games/checkers/" aria-labelledby="checkers-title checkers-cta">
-          <div class="cover"><picture><source type="image/webp" srcset="./assets/checkers-cover-600.webp 600w, ./assets/checkers-cover-1200.webp 1200w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 900px) 50vw, (max-width: 1364px) 25vw, 300px"><img src="./assets/checkers-cover.jpg" alt="Ivory and dark green draughts counters on a walnut-framed board" width="1200" height="800" decoding="async" loading="lazy"></picture></div>
-          <div class="game-copy"><div class="game-title"><h3 id="checkers-title">CHECKERS</h3></div><p class="description">8×8 checkers with compulsory captures and flying kings.</p><div class="multiplayer-facts"><span>2 players</span><span>No clock</span><span>Mouse &amp; touch</span></div><div class="card-bottom"><strong id="checkers-cta">Play CHECKERS <span aria-hidden="true">↗</span></strong></div></div>
-        </a>
-        <a class="game-card plan" href="../multiplayer/?game=plan" aria-labelledby="plan-title plan-cta">
-          <div class="cover"><picture><source type="image/webp" srcset="./assets/multiplayer-cover-600.webp 600w, ./assets/multiplayer-cover-1200.webp 1200w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 900px) 50vw, (max-width: 1364px) 25vw, 300px"><img src="./assets/multiplayer-cover.jpg" alt="Ivory playing cards on an emerald table" width="1200" height="800" decoding="async"></picture></div>
-          <div class="game-copy"><div class="game-title"><h3 id="plan-title">PLAN</h3></div><p class="description">Predict your tricks and play six rounds of cards with friends.</p><div class="multiplayer-facts"><span>2–6 players</span><span>20–60 min</span><span>Mouse &amp; touch</span></div><div class="card-bottom"><strong id="plan-cta">Play PLAN <span aria-hidden="true">↗</span></strong></div></div>
-        </a>
-      </div>
-      <a class="collection-link" href="../multiplayer/">Multiplayer collection <span aria-hidden="true">↗</span></a>
-    </section>
-    <section id="keyboard" class="collection" aria-labelledby="keyboard-title">
-      <div class="section-heading"><h2 id="keyboard-title">Keyboard</h2><span class="section-tag">4 games · Keyboard required</span></div>
-      <div class="game-grid">
-        <a class="game-card simcity" href="./simcity2000/" aria-labelledby="simcity-title simcity-cta">
-          <div class="cover"><picture><source type="image/webp" srcset="./assets/simcity-cover-600.webp 600w, ./assets/simcity-cover-1200.webp 1200w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 900px) 50vw, (max-width: 1364px) 25vw, 300px"><img src="./assets/simcity-cover.jpg" alt="A retro isometric city with office towers, homes, tree-lined streets and a bridge over a blue river" width="1200" height="800" decoding="async" loading="lazy"></picture></div>
-          <div class="game-copy"><div class="game-title"><h3 id="simcity-title">SimCity</h3></div><p class="description">Build roads, grow neighbourhoods, and manage your city. Save it to a file and return anytime.</p><div class="card-bottom"><span>Mouse &amp; keyboard</span><strong id="simcity-cta">Play SimCity <span aria-hidden="true">↗</span></strong></div></div>
-        </a>
-        <a class="game-card dock" href="../dock/" aria-labelledby="dock-title dock-cta">
-          <div class="cover"><img src="assets/dock.png" alt="A container ship approaching an illuminated harbor at dusk" width="1200" height="630"></div>
-          <div class="game-copy"><div class="game-title"><h3 id="dock-title">DOCK</h3></div><p class="description">Dock a container ship safely. A tugboat can help with the approach.</p><div class="card-bottom"><span>↑ ↓ ← → <span class="input-label">Keyboard</span></span><strong id="dock-cta">Play DOCK <span aria-hidden="true">↗</span></strong></div></div>
-        </a>
-        <a class="game-card park" href="../park/" aria-labelledby="park-title park-cta">
-          <div class="cover"><img src="assets/park.png" alt="Top-down view of PARK’s landscaped parking lot and colorful cars" width="960" height="600"></div>
-          <div class="game-copy"><div class="game-title"><h3 id="park-title">PARK</h3></div><p class="description">Park precisely, beat the clock, and try the trailer challenge.</p><div class="card-bottom"><span>↑ ↓ ← → <span class="input-label">Keyboard</span></span><strong id="park-cta">Play PARK <span aria-hidden="true">↗</span></strong></div></div>
-        </a>
-        <a class="game-card hamster" href="../hamster/" aria-labelledby="hamster-title hamster-cta">
-          <div class="cover"><img src="assets/hamster.png" alt="A golden hamster surrounded by wooden hideouts, colorful tunnels and treats" width="1536" height="1024"></div>
-          <div class="game-copy"><div class="game-title"><h3 id="hamster-title">HAMSTER</h3></div><p class="description">Explore a three-level habitat, collect treats, and run in the wheel.</p><div class="card-bottom"><span>W A S D <span class="input-label">Keyboard</span></span><strong id="hamster-cta">Play HAMSTER <span aria-hidden="true">↗</span></strong></div></div>
-        </a>
-      </div>
-    </section>
-    <section id="keyboard-mobile" class="collection" aria-labelledby="keyboard-mobile-title">
-      <div class="section-heading"><h2 id="keyboard-mobile-title">Keyboard and mobile</h2><span class="section-tag">1 game · Keyboard &amp; touch</span></div>
-      <div class="game-grid">
-        <a class="game-card sokoban" href="../sokoban/" aria-labelledby="sokoban-title sokoban-cta">
-          <div class="cover"><img src="./assets/sokoban-cover.jpg" alt="Sokoban warehouse puzzle with wooden crates, diamond targets and a warehouse keeper" width="1200" height="800" decoding="async" loading="lazy"></div>
-          <div class="game-copy"><div class="game-title"><h3 id="sokoban-title">SOKOBAN</h3></div><p class="description">Push every crate onto a target. Start easy, then explore 50 classic puzzles.</p><div class="multiplayer-facts"><span>1 player</span><span>Unlimited undo</span><span>Keyboard &amp; touch</span></div><div class="card-bottom"><strong id="sokoban-cta">Play SOKOBAN <span aria-hidden="true">↗</span></strong></div></div>
-        </a>
-      </div>
-    </section>
-    <aside class="ad-placement ad-placement-catalog" aria-label="Advertisement">
-      <p class="ad-placement-label">Advertisements</p>
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-3806610967714181"
-           data-ad-slot="7475979927"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-    </aside>
-  </main>
-  <footer class="site-footer wrap"><a class="footer-brand" href="./">MoD-IT <span>/ GAMES</span></a><p>Created by <a href="https://www.linkedin.com/in/grzegorz-byrka-81175515/" target="_blank" rel="noopener noreferrer">Grzegorz Byrka <span class="sr-only">on LinkedIn (opens in a new tab)</span> ↗</a></p><p><a href="./privacy.html">Privacy Policy</a></p></footer>
-  <!-- Inline so even a cached HTML document checks the current release. -->
-  <script type="module">
-    try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 10000);
-      let config;
-      try {
-        const response = await fetch(`./config.json?check=${Date.now().toString(36)}`, { cache: 'no-store', signal: controller.signal });
-        if (!response.ok) throw new Error('Configuration unavailable.');
-        config = await response.json();
-      } finally { clearTimeout(timeout); }
-      if (!config || !/^[a-z0-9]{3,16}$/i.test(config.version) || !Array.isArray(config.modules) || config.modules.length > 100) throw new Error('Invalid configuration.');
-      const imports = {};
-      for (const path of config.modules) {
-        if (typeof path !== 'string' || !/^\.\/[a-z0-9/-]+\.(?:mjs|js)$/i.test(path)) throw new Error('Invalid module path.');
-        const url = new URL(path, location.href);
-        imports[url.href] = `${url.href}?v=${encodeURIComponent(config.version)}`;
-      }
-      if (config.entry !== null && !config.modules.includes(config.entry)) throw new Error('Invalid entry module.');
-      if (config.entry !== null) {
-        if (!HTMLScriptElement.supports?.('importmap')) throw new Error('Import maps unavailable.');
-        const map = document.createElement('script');
-        map.type = 'importmap';
-        map.textContent = JSON.stringify({ imports });
-        document.head.append(map);
-      }
-      const style = document.querySelector('#app-style');
-      const styled = new Promise((resolve, reject) => {
-        style.onload = resolve;
-        style.onerror = () => reject(new Error('Styles unavailable.'));
-      });
-      style.href = `./style.css?v=${encodeURIComponent(config.version)}`;
-      document.querySelector('#app-icon').href = `./assets/favicon.svg?v=${encodeURIComponent(config.version)}`;
-      await styled;
-      if (config.entry !== null) await import(imports[new URL(config.entry, location.href).href]);
-      document.documentElement.dataset.appVersion = config.version;
-    } catch {
-      document.querySelector('#asset-error').hidden = false;
-      document.querySelector('#reload-assets').addEventListener('click', () => location.reload());
-    }
-  </script>
+  <p>The game collection is at <a href="/">mod-it.games</a>.</p>
 </body>
 </html>

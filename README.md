@@ -1,6 +1,6 @@
 # MoD-IT Games
 
-The English-language landing page for the MoD-IT browser game collection. The compact multiplayer section links to Catana Codex, HAMSTER multiplayer, TOW, TOW: Driver’s Seat, Boggle, CHESS, CHECKERS and PLAN, followed by a small link to the multiplayer collection. Both TOW covers prominently say **Keyboard controls only for now**. Plain HTML and CSS, with no build step or runtime dependencies.
+Shared files and DOS games for the MoD-IT browser game collection. The single public catalog is now at `https://mod-it.games/`, with its HTML in the sibling `gbyrka.github.io` repository. This repository’s `index.html` redirects `/games/` directly to `/`, preserving query parameters and category fragments. Styles, images, configuration and privacy remain under `/games/`. The compact multiplayer section links to Catana Codex, HAMSTER multiplayer, TOW, TOW: Driver’s Seat, Boggle, CHESS, CHECKERS and PLAN, followed by a small link to the multiplayer collection. Both TOW covers prominently say **Keyboard controls only for now**. Plain HTML and CSS, with no build step or runtime dependencies.
 
 ## Preview
 
@@ -17,16 +17,16 @@ files. Mouse and keyboard controls are stated on its card. See
 Serve the parent folder containing `games`, `multiplayer`, `dock`, `park`, `hamster`, and `sokoban`:
 
 ```sh
-python3 -m http.server 8000
+node gbyrka.github.io/tools/preview.mjs
 ```
 
-Open `http://localhost:8000/games/`. Sibling links also work on GitHub Pages at `https://mod-it.games/games/`, with each game published in its own repository.
+Open `http://127.0.0.1:8000/`. The preview mounts the root homepage and every sibling project at its public path; `/games/` redirects to `/`.
 
 ## Publish
 
 Publish this repository's root to GitHub Pages. Include `index.html`, `privacy.html`, `config.json`, `style.css`, `ads.css`, `monetization.js`, and `assets/`.
 
-The public catalog is `https://mod-it.games/games/`. The custom domain belongs to the sibling user-site repository `gbyrka.github.io`; project sites inherit it. Keep the HTTPS redirect at the start of both HTML entry pages: it preserves paths, room/challenge parameters and fragments when upgrading HTTP or moving from the old GitHub hostname. Relative game links remain on HTTPS, while local HTTP previews still work.
+The public catalog is `https://mod-it.games/`; `/games/` is its compatibility redirect. The custom domain belongs to the sibling user-site repository `gbyrka.github.io`; project sites inherit it. Keep the HTTPS redirect at the start of both HTML entry pages: it preserves paths, room/challenge parameters and fragments when upgrading HTTP or moving from the old GitHub hostname. Relative game links remain on HTTPS, while local HTTP previews still work.
 
 ## Privacy policy
 
@@ -40,7 +40,7 @@ Review this page when changing services or storage. Confirm Analytics retention 
 
 The catalog has one responsive `games_catalog` unit (`7475979927`) after the category sections, before the footer. The eligible game pages have one `game_footer` unit (`9380002810`) in a separate section below its game shell and controls, with 180px of separation on both sides. The sections use neutral `Advertisements` labels, use clearly separated borders and do not change game viewport sizes.
 
-Each Pages project includes its own identical `monetization.js` and `ads.css` so it can deploy independently. The Google AdSense script is loaded once per document. Ad units are requested once when they enter the viewport; blocked scripts or unfilled units hide the ad section. No ads or analytics are added to the privacy page or the root homepage.
+Each Pages project includes its own identical `monetization.js` and `ads.css` so it can deploy independently. The Google AdSense script is loaded once per document. Ad units are requested once when they enter the viewport; blocked scripts or unfilled units hide the ad section. The root homepage now hosts the existing catalog placement. The privacy page and `/games/` redirect load no ads or analytics.
 
 In AdSense, publish the Google CMP message for `mod-it.games`. In **Privacy & messaging → European regulations → Settings**, enable Consent Mode for **advertising** and **analytics**. Keep Auto ads off when using these manual placements. `monetization.js` starts with denied consent and loads Google Analytics only after Google CMP reports analytics consent as granted or not applicable. Unknown, denied or unconfigured consent does not load Analytics, and gameplay events before permission are discarded. AdSense handles its own ad consent through the CMP.
 
@@ -52,11 +52,11 @@ Before publishing changes to CSS or JavaScript, change `version` in `config.json
 
 The inline loader fetches the configuration with `cache: 'no-store'` and a unique query parameter on every visit, even when the HTML is cached. It then loads `style.css?v=cedar` and the favicon with the configured version. The initial stylesheet keeps the static catalog usable while the configuration loads, including with JavaScript disabled. A visible reload notice appears if the current release cannot be loaded.
 
-The catalog currently needs no application JavaScript. When adding it, set `entry` to its relative path (e.g. `"./app.mjs"`) and list **all** local modules, including dependencies, in `modules`. The loader installs an import map before loading the entry, so the entry and its imports use the same `?v=` value. Keep `entry: null` and `modules: []` while the catalog is HTML/CSS only. No build step is required.
+The catalog HTML and inline loader now live in `../gbyrka.github.io/index.html`, with root-relative `/games/` asset and configuration URLs. The catalog currently needs no application JavaScript. When adding it, set `entry` to its relative path (e.g. `"./app.mjs"`) and list **all** local modules, including dependencies, in `modules`. The loader installs an import map before loading the entry, so the entry and its imports use the same `?v=` value. Keep `entry: null` and `modules: []` while the catalog is HTML/CSS only. No build step is required.
 
 ## Add a game
 
-Copy a `.game-card` into the appropriate section, give its title and call to action unique IDs, update `aria-labelledby`, and set the game URL, image, description, and controls. Update the visible game count. Only add navigation links to categories containing playable games; do not link to empty coming-soon sections.
+In `../gbyrka.github.io/index.html`, copy a `.game-card` into the appropriate section, give its title and call to action unique IDs, update `aria-labelledby`, and set the game URL, image, description, and controls. Update the visible game count. Only add navigation links to categories containing playable games; do not link to empty coming-soon sections.
 
 Multiplayer is the first collection section, with local cover artwork and a compact introduction. On desktop, its eight cards form two rows of four: Catana Codex / HAMSTER multiplayer / TOW / TOW: Driver’s Seat, then Boggle / CHESS / CHECKERS / PLAN. The grid uses two columns at 541–900px and one column at 540px or below. Keyboard games follow, then **Keyboard and mobile** with SOKOBAN at `https://mod-it.games/sokoban/`. Its cover (`assets/sokoban-cover.jpg`) is a real gameplay capture. The catalog only links to populated categories. Every game is serverless and requires no registration.
 
