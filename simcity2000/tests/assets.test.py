@@ -40,11 +40,16 @@ class GameAssets(unittest.TestCase):
             data = (ROOT / 'vendor' / name).read_bytes()
             self.assertEqual({'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()}, expected)
 
-    def test_entry_is_unlisted_and_runtime_is_local(self):
+    def test_public_entry_is_listed_and_runtime_is_local(self):
         html = (ROOT / 'index.html').read_text()
-        self.assertIn('noindex,nofollow', html)
+        self.assertIn('index,follow', html)
+        self.assertNotIn('noindex', html)
         self.assertIn('https://mod-it.games/games/simcity2000/', html)
-        self.assertNotIn('simcity2000', (ROOT.parent / 'index.html').read_text().lower())
+        catalog = (ROOT.parent / 'index.html').read_text()
+        self.assertIn('href="./simcity2000/"', catalog)
+        self.assertIn('id="simcity-title">SimCity</h3>', catalog)
+        self.assertIn('https://mod-it.games/games/assets/simcity-social.jpg', html)
+        self.assertTrue((ROOT.parent / 'assets/simcity-social.jpg').exists())
         self.assertNotIn('simcity2000', (ROOT.parent / 'config.json').read_text().lower())
         self.assertNotIn('<iframe', html)
         self.assertTrue((ROOT.parent / '.nojekyll').exists())

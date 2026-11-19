@@ -6,9 +6,10 @@ supplied scenarios run inside locally hosted DOSBox/WebAssembly. No account,
 backend, hosted player, CDN, advertising or telemetry is required.
 
 Direct route after deployment: **https://mod-it.games/games/simcity2000/**.
-The page has `noindex,nofollow` and is absent from the catalog and its release
-configuration. A direct link is unlisted, not password protection. No build is
-required for publication: include this directory in the existing `games` Pages
+The game is publicly listed as **SimCity**, first in the catalog's **Keyboard**
+section and in the main homepage's solo games. The page is indexable and has a
+local social preview. No build is required for publication: include this
+directory and the shared `assets/simcity-*` files in the existing `games` Pages
 repository; `.nojekyll` is already present. No deployment is performed by the
 local preparation tools.
 

@@ -9,9 +9,10 @@ repository. It is not linked from the catalog. See [pop/README.md](pop/README.md
 for the original DOS files, locally hosted emulator, controls, checkpoints and
 verification. It owns its own release configuration and requires no build.
 
-SimCity 2000 is also available by direct link at `/games/simcity2000/`, without
-a catalog entry. It runs the full original DOS 1.01 CD edition and supports
-portable `.SC2` city files. See [simcity2000/README.md](simcity2000/README.md).
+**SimCity** is the first card in **Keyboard**, linking to `/games/simcity2000/`.
+It runs the full original DOS 1.01 CD edition and supports portable `.SC2` city
+files. Mouse and keyboard controls are stated on its card. See
+[simcity2000/README.md](simcity2000/README.md).
 
 Serve the parent folder containing `games`, `multiplayer`, `dock`, `park`, `hamster`, and `sokoban`:
 
@@ -60,6 +61,12 @@ Copy a `.game-card` into the appropriate section, give its title and call to act
 Multiplayer is the first collection section, with local cover artwork and a compact introduction. On desktop, its eight cards form two rows of four: Catana Codex / HAMSTER multiplayer / TOW / TOW: Driver’s Seat, then Boggle / CHESS / CHECKERS / PLAN. The grid uses two columns at 541–900px and one column at 540px or below. Keyboard games follow, then **Keyboard and mobile** with SOKOBAN at `https://mod-it.games/sokoban/`. Its cover (`assets/sokoban-cover.jpg`) is a real gameplay capture. The catalog only links to populated categories. Every game is serverless and requires no registration.
 
 ## Artwork and social sharing
+
+SimCity uses `assets/simcity-cover.jpg` and responsive 600/1200 px WebP copies.
+The game is public and indexable; `assets/simcity-social.jpg` is its 1200×630
+social preview. Full-resolution thumbnail and LinkedIn masters, an upload-ready
+JPEG with `https://mod-it.games`, and the exact built-in image-generation prompts
+are in [marketing/SIMCITY-PROMPTS.md](marketing/SIMCITY-PROMPTS.md).
 
 Driver’s Seat and Boggle are public and indexable. Each has its own generated cover, responsive JPEG/WebP copies here, and a dedicated social preview in the multiplayer repository. Full-resolution LinkedIn posters, upload-ready JPEGs and final built-in-tool prompts are in [marketing/DRIVERS-SEAT-BOGGLE-PROMPTS.md](../multiplayer/marketing/DRIVERS-SEAT-BOGGLE-PROMPTS.md). Both posters show `https://mod-it.games`.
 
