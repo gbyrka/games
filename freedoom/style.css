@@ -1,0 +1,142 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, sans-serif;
+  color: #edf4ee;
+  background: #111615;
+  --line: #364643;
+  --muted: #b3c4be;
+  --accent: #bff88c;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; }
+main { width: min(100% - 2rem, 68rem); margin: 0 auto; padding: 1.4rem 0 2rem; }
+a { color: inherit; text-underline-offset: .24em; }
+a:hover { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .9rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.55rem, 4vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -.035em;
+}
+
+h1 span { margin-inline-start: .55em; color: var(--muted); font-size: .58em; letter-spacing: 0; }
+
+#player {
+  overflow: clip;
+  border: 1px solid var(--line);
+  border-radius: .65rem;
+  background: #0b0e0d;
+}
+
+.screen {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  min-width: 0;
+  min-height: 0;
+  background: #050706;
+}
+
+canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; }
+canvas:focus-visible { outline-offset: -3px; }
+
+#start-screen {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  padding: 1rem;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center, #0c160bc9, #090d0b40 70%),
+    #141c17 url("../assets/freedoom-cover-1200.webp") center / cover;
+}
+
+#toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .45rem 1rem;
+  min-height: 3.15rem;
+  padding: .45rem .75rem;
+  border-top: 1px solid var(--line);
+  background: #18201e;
+}
+
+#mouse-hint, #status, #display-status, footer { color: var(--muted); font-size: .9rem; }
+
+button {
+  padding: .45rem .7rem;
+  border: 1px solid #536960;
+  border-radius: .38rem;
+  background: #24342e;
+  color: #f4f8f3;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover { border-color: var(--accent); }
+
+#play {
+  min-width: 8rem;
+  padding: .7rem 1.6rem;
+  color: #101b0a;
+  background: var(--accent);
+  border-color: var(--accent);
+  font-weight: 750;
+}
+
+#play:hover { background: #d6ffb5; }
+#fullscreen kbd { margin-left: .3rem; }
+
+#player:fullscreen {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  border: 0;
+  border-radius: 0;
+}
+
+#player:fullscreen .screen { aspect-ratio: auto; }
+
+.controls {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: .5rem;
+  padding: .8rem 1rem;
+  background: #18201e;
+}
+
+summary { cursor: pointer; font-weight: 700; }
+.controls dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 27rem), 1fr)); gap: .45rem 1.4rem; margin: .8rem 0; }
+.controls dl > div { display: grid; align-items: baseline; grid-template-columns: minmax(8.5rem, 2fr) 3fr; gap: .5rem; }
+.controls dd { margin: 0; }
+.controls p { color: var(--muted); margin: .7rem 0 .15rem; }
+
+kbd {
+  padding: .07em .3em;
+  border: 1px solid #516158;
+  border-radius: .25em;
+  background: #101715;
+  color: #edf4ee;
+  font-size: .88em;
+  white-space: nowrap;
+}
+
+footer { margin-top: 1rem; }

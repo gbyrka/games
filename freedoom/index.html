@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Play Freedoom: Phase 2 in your browser.">
+  <title>Freedoom: Phase 2 · MoD-IT Games</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="player.js"></script>
+</head>
+<body>
+  <main>
+    <header class="page-header">
+      <h1>Freedoom <span>Phase 2</span></h1>
+      <a href="/" aria-label="MoD-IT Games home">All games</a>
+    </header>
+
+    <section id="player" aria-label="Game player">
+      <div class="screen">
+        <canvas id="canvas" width="960" height="540" tabindex="0" aria-label="Freedoom game screen"></canvas>
+        <div id="start-screen">
+          <button id="play" type="button">Play</button>
+          <p id="status" role="status" hidden></p>
+        </div>
+        <noscript>Enable JavaScript to play.</noscript>
+      </div>
+      <div id="toolbar">
+        <span id="mouse-hint">Click the game to capture the mouse.</span>
+        <button id="fullscreen" type="button" aria-keyshortcuts="V" hidden><span>Full screen</span> <kbd>V</kbd></button>
+      </div>
+    </section>
+    <p id="display-status" role="status" hidden></p>
+
+    <details class="controls" open>
+      <summary>Controls</summary>
+      <dl>
+        <div><dt><kbd>W</kbd> <kbd>S</kbd></dt><dd>Move forward / backward</dd></div>
+        <div><dt><kbd>A</kbd> <kbd>D</kbd></dt><dd>Strafe left / right</dd></div>
+        <div><dt>Mouse or <kbd>←</kbd> <kbd>→</kbd></dt><dd>Turn left / right</dd></div>
+        <div><dt>Left click or <kbd>Ctrl</kbd></dt><dd>Fire</dd></div>
+        <div><dt><kbd>Space</kbd></dt><dd>Open doors / use switches</dd></div>
+        <div><dt><kbd>Shift</kbd></dt><dd>Walk while held (run when always run is off)</dd></div>
+        <div><dt><kbd>Caps Lock</kbd></dt><dd>Toggle always run</dd></div>
+        <div><dt><kbd>1</kbd>–<kbd>7</kbd> or scroll</dt><dd>Switch weapons</dd></div>
+        <div><dt><kbd>Tab</kbd></dt><dd>Toggle map</dd></div>
+        <div><dt><kbd>Esc</kbd></dt><dd>Open or close the game menu</dd></div>
+        <div><dt><kbd>↑</kbd> <kbd>↓</kbd> <kbd>Enter</kbd></dt><dd>Navigate and select in menus</dd></div>
+        <div><dt><kbd>F2</kbd> / <kbd>F3</kbd></dt><dd>Save / load game</dd></div>
+        <div><dt><kbd>V</kbd></dt><dd>Toggle full screen</dd></div>
+      </dl>
+      <p>The browser may use <kbd>Esc</kbd> to release the mouse or exit full screen first. Click the game to capture the mouse again.</p>
+    </details>
+
+    <footer>
+      <a href="https://freedoom.github.io/">Freedoom</a> ·
+      <a href="https://github.com/GMH-Code/Dwasm">Dwasm</a> ·
+      <a href="credits.html">Credits and licenses</a>
+    </footer>
+  </main>
+</body>
+</html>
